@@ -1,0 +1,207 @@
+<script>window.__tpt_full_page = 1</script><script class='tpt_dynamic'>
+function dynamicAttach(itemId, containerId, override) {
+    if (!window.__tpt_everlasting_cache) {
+        window.__tpt_everlasting_cache = {};
+    }
+    
+    var slt = '.spb-item.type_actual_statement.spb-item-id_' + itemId;
+    var targetElement = document.querySelector(slt);
+    var containerElement = document.querySelector('.' + containerId);
+    console.log(targetElement, containerElement);
+    if (containerElement && (containerElement.innerHTML).trim().length > 0) {
+            window.__tpt_everlasting_cache[slt] = containerElement.innerHTML;
+    }
+    if ((targetElement && (!targetElement.innerHTML.length || override)) && ((containerElement && (containerElement.innerHTML).trim() || window.__tpt_everlasting_cache[slt]))) {
+        console.log('Found container element');
+    console.log(itemId, containerId);    
+        if (containerElement && (containerElement.innerHTML).trim().length > 0) {
+            var tpt_rerun = containerElement.querySelectorAll('script.tpt_rerun, script.tpt_inject_script');
+            if (containerElement.childNodes) {
+                Array.from(containerElement.childNodes).forEach(function(node) {
+                    targetElement.append(node);
+                });
+            }
+            tpt_rerun.forEach(function(t) {
+                Function(t.innerText)()
+            });
+        } else if (window.__tpt_everlasting_cache[slt]) {
+            targetElement.innerHTML = window.__tpt_everlasting_cache[slt];
+            var tpt_rerun = targetElement.querySelectorAll('script.tpt_rerun, script.tpt_inject_script');
+            tpt_rerun.forEach(function(t) {
+                Function(t.innerText)()
+            });
+        } else if (targetElement && containerElement && targetElement.innerHTML.length) {
+            console.log('Already attached', slt);
+    }
+}
+        if (!window._tapita_ssr_ijt_obj) {
+            window._tapita_ssr_ijt_obj = {};
+        }
+        window._tapita_ssr_ijt_obj[slt] = function() {
+            return dynamicAttach(itemId, containerId, override)
+        };
+    
+}
+</script>
+<script>window._issolate_tapita_hamburger = true;</script>
+
+        <style>
+                .type_actual_statement{width: 100%}
+        </style>
+        {% assign content = page.metafields.tapita["any"] %}
+        
+        <div id="tapita-page-main-content" style="min-height: 100vh; display: block">
+          <h1 class="tapita-placeholder" style="display:none;">
+            "", 1
+          </h1>
+        </div>
+
+        
+        <div class="rte">
+            <script>
+                try {
+                    var _tpt_insigna = "12762429c0c3a1022e5a0a90d771203c";
+                    if(!globalThis._tpt_pbds){
+                        globalThis._tpt_pbds = [];
+                    }
+                }catch(e){
+                    console.warn(e);
+                }
+                var tapitacss = `#shopify-section-tapita-main-page, #shopify-section-tapita-main-home { min-height: 100vh; } .main.content { max-width: unset; } .spb-item-root {width: 100%;} h1.main-page-title.page-title {display: none;} .spb-item.type_text {overflow-y: hidden;} `;
+                var tapitahead = document.head || document.getElementsByTagName("head")[0];
+                var tapitastyle = document.createElement("style");
+
+                tapitastyle.type = "text/css";
+                if (tapitastyle.styleSheet){
+                    tapitastyle.styleSheet.cssText = tapitacss;
+                } else {
+                    tapitastyle.appendChild(document.createTextNode(tapitacss));
+                }
+                tapitastyle.class="tapita-custom-css";
+                 
+                var tapitajs = ``;
+                var tapitascript = document.createElement("script");
+                tapitascript.appendChild(document.createTextNode(tapitajs));
+                tapitascript.defer = true;
+                tapitascript.class="tapita-custom-css";
+
+                tapitahead.appendChild(tapitastyle);
+                tapitahead.appendChild(tapitascript);
+                {% if request.page_type == "product" %}
+                    var kulasop  = 9;
+                {% endif %}
+            </script>
+            
+            {{ 'tapita-cdn-assets-1.6.37.js' | asset_url | script_tag }}
+             
+            <script defer>
+                var tapita_counter = 0;
+                var possibleMainTargetQuery = [
+                    
+                    "#tapita-page-main-content",
+                    ".normal_main_content",
+                    "#MainContent",
+                    "shopify-section-tapita-main-page",
+                    "shopify-section-tapita-main-home",
+                    "main",
+                ];
+                {% if request.page_type == "product" %}
+                    var kulasop  = 2;
+                {% endif %}
+              
+                var currentMain = null;
+                for (const selector of possibleMainTargetQuery) {
+                    currentMain = document.querySelector(selector);
+                    if(currentMain){
+                        break;
+                    }
+                }
+                var injector = setInterval(function () {
+                    var idToRender = false;
+                    var mainTarget = null;
+                    for (const selector of possibleMainTargetQuery) {
+                        mainTarget = document.querySelector(selector);
+                        if(mainTarget){
+                            break;
+                        }
+                    }
+                    if(currentMain && currentMain.id !=="MainContent"){
+                        currentMain.id = "MainContentTapita";
+                        idToRender = "MainContentTapita";
+                    }
+                    
+                    if (!idToRender)
+                        return;
+                    {% if request.page_type == "product" %}
+                        var licobioga  = 97;
+                    {% endif %}
+                    tapita_counter += 1;
+                    if (globalThis.PageBuilderComponent) {
+                        var tapitaSections = document.querySelectorAll(".tapitaSection, .spb-customerhtml-serverrender");
+                        currentMain = null;
+                        function tptPBD(forcedRerender){
+                            var lemonadeConsumer = document.querySelector(`#${idToRender} .smpb-container`);
+                            if(lemonadeConsumer && lemonadeConsumer.innerHTML  && !forcedRerender){
+                                return;
+                            }
+                            PageBuilderComponent.renderForIdWithProps(idToRender, {
+                            endPoint: "https://tapita.io/pb/graphql/",
+                            mode: "shopify",
+                            lazyloadPlaceHolder: " ",
+                            formatMessage: globalThis._rms_translate,
+                            _translateParagraph: true,
+                            _translateSEO: true,
+                            _translatePlaceholder: true,
+                            callback: function() { try { if (globalThis.PageBuilderComponent && globalThis._tpt_pbds && (globalThis._tpt_pbds instanceof Array)) globalThis._tpt_pbds.forEach(t => t && t()); } catch (e) { } },
+                            pageData: {"apply_to":"collection_handle,frontpage,keybord,airpods,mouse,kitchen,watches,lumines-and-camera,hair-clipper","priority":10,"entity_id":15306,"name":"Collection","status":1,"masked_id":"217401gqvTkv8sGrBYGrgWNXt1702835211","custom_css":" .grow {\n  overflow: hidden;\n}\n.grow>img {\n  transition: all .5s ease-in-out;\n  -webkit-transition: all .5s ease-in-out;\n  -moz-transition: all .5s ease-in-out;\n  -ms-transition: all .5s ease-in-out;\n  -o-transition: all .5s ease-in-out;\n}\n.grow>img:hover {\n  transform: scale3d(1.1,1.1,1);\n  -moz-transform: scale3d(1.1,1.1,1);\n  -o-transform: scale3d(1.1,1.1,1);\n  -ms-transform: scale3d(1.1,1.1,1);\n  -webkit-transform: scale3d(1.1,1.1,1);\n  filter: brightness(0.8);\n} .grow {\n  overflow: hidden;\n}\n.grow>img {\n  transition: all .5s ease-in-out;\n  -webkit-transition: all .5s ease-in-out;\n  -moz-transition: all .5s ease-in-out;\n  -ms-transition: all .5s ease-in-out;\n  -o-transition: all .5s ease-in-out;\n}\n.grow>img:hover {\n  transform: scale3d(1.1,1.1,1);\n  -moz-transform: scale3d(1.1,1.1,1);\n  -o-transform: scale3d(1.1,1.1,1);\n  -ms-transform: scale3d(1.1,1.1,1);\n  -webkit-transform: scale3d(1.1,1.1,1);\n  filter: brightness(0.8);\n}","custom_js":null,"keywords":null,"title":"","desc":"","is_rtl":0,"storeview_visibility":"","publish_items":"[{\"entity_id\":2454,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"paddingTop\\\":\\\"0px\\\",\\\"paddingBottom\\\":\\\"0px\\\",\\\"paddingLeft\\\":\\\"0px\\\",\\\"paddingRight\\\":\\\"0px\\\",\\\"flexDirection\\\":\\\"row\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\"}\",\"data\":\"{}\",\"name\":\"Collection1\",\"tag_id\":\"pbi_YUlURWIxNjk5NTE4MDgyMTQ5_82149\",\"class_name\":\"\",\"type\":\"actual_statement\",\"visibility\":\"\",\"sort_order\":20,\"parent_id\":2452,\"storeview_visibility\":\"\"},{\"entity_id\":2416,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"display\\\":\\\"grid\\\",\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":\\\"20px\\\",\\\"paddingBottom\\\":\\\"20px\\\",\\\"paddingLeft\\\":\\\"15px\\\",\\\"paddingRight\\\":\\\"15px\\\",\\\"minHeight\\\":100,\\\"justifyContent\\\":\\\"center\\\",\\\"columnGap\\\":\\\"15px\\\",\\\"rowGap\\\":\\\"15px\\\",\\\"gridTemplateColumns\\\":\\\"1fr 1fr 1fr 1fr\\\",\\\"t_gridTemplateColumns\\\":\\\"1fr 1fr\\\",\\\"m_gridTemplateColumns\\\":\\\"1fr\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"t_maxWidth\\\":\\\"1024px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\"}\",\"data\":\"{\\\"layoutMarker\\\":2}\",\"name\":\"\",\"tag_id\":\"pbi_aE1jTzkxNjc4NDU4MzY1MjU2_65256\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":30,\"parent_id\":0,\"storeview_visibility\":\"\"},{\"entity_id\":2418,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"column\\\",\\\"widthPercent\\\":100,\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"objectPosition\\\":\\\"center center\\\",\\\"heightPixel\\\":70,\\\"objectFit\\\":\\\"contain\\\",\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5}\",\"data\":\"{\\\"image\\\":\\\"https:\\\\\\\/\\\\\\\/tapita.io\\\\\\\/pb\\\\\\\/pub\\\\\\\/media\\\\\\\/spb\\\\\\\/usr\\\\\\\/8242\\\\\\\/oti\\\\\\\/1670688215902\\\\\\\/shipping.png\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_UGl4c0QxNjcwNjg4MzYwNzA0_60704\",\"class_name\":\"\",\"type\":\"image\",\"visibility\":\"\",\"sort_order\":50,\"parent_id\":2417,\"storeview_visibility\":\"0\"},{\"entity_id\":2422,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"column\\\",\\\"widthPercent\\\":100,\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"objectPosition\\\":\\\"center center\\\",\\\"heightPixel\\\":70,\\\"objectFit\\\":\\\"contain\\\",\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5}\",\"data\":\"{\\\"image\\\":\\\"https:\\\\\\\/\\\\\\\/tapita.io\\\\\\\/pb\\\\\\\/pub\\\\\\\/media\\\\\\\/spb\\\\\\\/usr\\\\\\\/8242\\\\\\\/oti\\\\\\\/1670688227687\\\\\\\/satisfaction-guaranteed.png\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_UGl4c0QxNjcwNjg4MzYwNzA0_60704\",\"class_name\":\"\",\"type\":\"image\",\"visibility\":\"\",\"sort_order\":80,\"parent_id\":2421,\"storeview_visibility\":\"0\"},{\"entity_id\":2426,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"column\\\",\\\"widthPercent\\\":100,\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"objectPosition\\\":\\\"center center\\\",\\\"heightPixel\\\":70,\\\"objectFit\\\":\\\"contain\\\",\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5}\",\"data\":\"{\\\"image\\\":\\\"https:\\\\\\\/\\\\\\\/tapita.io\\\\\\\/pb\\\\\\\/pub\\\\\\\/media\\\\\\\/spb\\\\\\\/usr\\\\\\\/8242\\\\\\\/oti\\\\\\\/1670688238171\\\\\\\/client-support.png\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_UGl4c0QxNjcwNjg4MzYwNzA0_60704\",\"class_name\":\"\",\"type\":\"image\",\"visibility\":\"\",\"sort_order\":110,\"parent_id\":2425,\"storeview_visibility\":\"0\"},{\"entity_id\":2430,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"column\\\",\\\"widthPercent\\\":100,\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"objectPosition\\\":\\\"center center\\\",\\\"heightPixel\\\":70,\\\"objectFit\\\":\\\"contain\\\",\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5}\",\"data\":\"{\\\"image\\\":\\\"https:\\\\\\\/\\\\\\\/tapita.io\\\\\\\/pb\\\\\\\/pub\\\\\\\/media\\\\\\\/spb\\\\\\\/usr\\\\\\\/8242\\\\\\\/oti\\\\\\\/1670688438341\\\\\\\/secure-payments.png\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_UGl4c0QxNjcwNjg4MzYwNzA0_60704\",\"class_name\":\"\",\"type\":\"image\",\"visibility\":\"\",\"sort_order\":120,\"parent_id\":2429,\"storeview_visibility\":\"0\"},{\"entity_id\":2417,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\",\\\"minHeight\\\":100}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":130,\"parent_id\":2416,\"storeview_visibility\":\"0\"},{\"entity_id\":2421,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\",\\\"minHeight\\\":100}\",\"data\":null,\"name\":\"\",\"tag_id\":\"pbi_Mjl5REMxNjcwNjg4NjI2NTI2_26526\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":140,\"parent_id\":2416,\"storeview_visibility\":\"0\"},{\"entity_id\":2425,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\",\\\"minHeight\\\":100}\",\"data\":null,\"name\":\"\",\"tag_id\":\"pbi_UHNjc2MxNjcwNjg4NjI1OTA5_25909\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":150,\"parent_id\":2416,\"storeview_visibility\":\"0\"},{\"entity_id\":2429,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\",\\\"minHeight\\\":100}\",\"data\":null,\"name\":\"\",\"tag_id\":\"pbi_eGN4bmkxNjcwNjg4NjI1MTgx_25181\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":160,\"parent_id\":2416,\"storeview_visibility\":\"0\"},{\"entity_id\":2419,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"fontFamily\\\":\\\"inherit\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"fontSize\\\":\\\"16px\\\",\\\"textAlign\\\":\\\"center\\\",\\\"fontWeight\\\":700,\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5}\",\"data\":\"{\\\"textTag\\\":\\\"h4\\\"}\",\"name\":\"Free Shipping\",\"tag_id\":\"pbi_aDRuZnIxNjcwNjg4NDcwMTgz_70183\",\"class_name\":\"\",\"type\":\"text\",\"visibility\":\"\",\"sort_order\":170,\"parent_id\":2417,\"storeview_visibility\":\"0\"},{\"entity_id\":2423,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"fontFamily\\\":\\\"inherit\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"fontSize\\\":\\\"16px\\\",\\\"textAlign\\\":\\\"center\\\",\\\"fontWeight\\\":700,\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5}\",\"data\":\"{\\\"textTag\\\":\\\"h4\\\"}\",\"name\":\"Satisfaction Guaranteed\",\"tag_id\":\"pbi_aDRuZnIxNjcwNjg4NDcwMTgz_70183\",\"class_name\":\"\",\"type\":\"text\",\"visibility\":\"\",\"sort_order\":180,\"parent_id\":2421,\"storeview_visibility\":\"0\"},{\"entity_id\":2427,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"fontFamily\\\":\\\"inherit\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"fontSize\\\":\\\"16px\\\",\\\"textAlign\\\":\\\"center\\\",\\\"fontWeight\\\":700,\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5}\",\"data\":\"{\\\"textTag\\\":\\\"h4\\\"}\",\"name\":\"24\\\/7 Client Support\",\"tag_id\":\"pbi_aDRuZnIxNjcwNjg4NDcwMTgz_70183\",\"class_name\":\"\",\"type\":\"text\",\"visibility\":\"\",\"sort_order\":190,\"parent_id\":2425,\"storeview_visibility\":\"0\"},{\"entity_id\":2431,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"fontFamily\\\":\\\"inherit\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"fontSize\\\":\\\"16px\\\",\\\"textAlign\\\":\\\"center\\\",\\\"fontWeight\\\":700,\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5}\",\"data\":\"{\\\"textTag\\\":\\\"h4\\\"}\",\"name\":\"Secure Payments\",\"tag_id\":\"pbi_aDRuZnIxNjcwNjg4NDcwMTgz_70183\",\"class_name\":\"\",\"type\":\"text\",\"visibility\":\"\",\"sort_order\":200,\"parent_id\":2429,\"storeview_visibility\":\"0\"},{\"entity_id\":2420,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"lineHeight\\\":\\\"2em\\\",\\\"fontFamily\\\":\\\"inherit\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5,\\\"paddingLeft\\\":5,\\\"paddingRight\\\":5}\",\"data\":\"{\\\"paragraphContent\\\":\\\"<p style=\\\\\\\"text-align:center;\\\\\\\"><span style=\\\\\\\"font-size: 16px;\\\\\\\">You love free shipping, we love free shipping, everyone loves it!<\\\\\\\/span><\\\\\\\/p>\\\\n\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_cXFIQ2oxNjcwNjg4NDg4Nzgz_88783\",\"class_name\":\"\",\"type\":\"paragraph\",\"visibility\":\"\",\"sort_order\":210,\"parent_id\":2417,\"storeview_visibility\":\"0\"},{\"entity_id\":2424,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"lineHeight\\\":\\\"2em\\\",\\\"fontFamily\\\":\\\"inherit\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5,\\\"paddingLeft\\\":5,\\\"paddingRight\\\":5}\",\"data\":\"{\\\"paragraphContent\\\":\\\"<p style=\\\\\\\"text-align:center;\\\\\\\">Is something wrong? You have 14 days to change your mind.<\\\\\\\/p>\\\\n\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_cXFIQ2oxNjcwNjg4NDg4Nzgz_88783\",\"class_name\":\"\",\"type\":\"paragraph\",\"visibility\":\"\",\"sort_order\":220,\"parent_id\":2421,\"storeview_visibility\":\"0\"},{\"entity_id\":2428,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"lineHeight\\\":\\\"2em\\\",\\\"fontFamily\\\":\\\"inherit\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5,\\\"paddingLeft\\\":5,\\\"paddingRight\\\":5}\",\"data\":\"{\\\"paragraphContent\\\":\\\"<p style=\\\\\\\"text-align:center;\\\\\\\">Need help? Our team will gladly help you anytime!<\\\\\\\/p>\\\\n\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_cXFIQ2oxNjcwNjg4NDg4Nzgz_88783\",\"class_name\":\"\",\"type\":\"paragraph\",\"visibility\":\"\",\"sort_order\":230,\"parent_id\":2425,\"storeview_visibility\":\"0\"},{\"entity_id\":2432,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"lineHeight\\\":\\\"2em\\\",\\\"fontFamily\\\":\\\"inherit\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5,\\\"paddingLeft\\\":5,\\\"paddingRight\\\":5}\",\"data\":\"{\\\"paragraphContent\\\":\\\"<p style=\\\\\\\"text-align:center;\\\\\\\">We use SSL encryption to ensure a secure shopping experience.<\\\\\\\/p>\\\\n\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_cXFIQ2oxNjcwNjg4NDg4Nzgz_88783\",\"class_name\":\"\",\"type\":\"paragraph\",\"visibility\":\"\",\"sort_order\":240,\"parent_id\":2429,\"storeview_visibility\":\"0\"},{\"entity_id\":2452,\"page_id\":\"15306\",\"status\":1,\"styles\":\"{\\\"display\\\":\\\"block\\\",\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":\\\"20px\\\",\\\"paddingBottom\\\":\\\"20px\\\",\\\"paddingLeft\\\":\\\"15px\\\",\\\"paddingRight\\\":\\\"15px\\\",\\\"minHeight\\\":100,\\\"justifyContent\\\":\\\"center\\\"}\",\"data\":\"{\\\"layoutMarker\\\":2}\",\"name\":\"\",\"tag_id\":\"pbi_ckx6Y2QxNjk5NTE3OTk1NzA4_95708\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":250,\"parent_id\":0,\"storeview_visibility\":\"\"}]","type_id":1,"url_path":"","updated_at":"2023-12-17 17:49:31","published_at":"2023-12-17 17:46:51","image":"https:\/\/tapita.io\/pb\/pub\/media\/spb\/usr\/1\/7033\/1679475962PBPAGEIMAGE.png"}
+                            });
+                        }
+                        globalThis._tpt_pbds.push(tptPBD);
+                        tptPBD();
+                        
+        function _tapita_ssr_cti(){window._tapita_ssr_ijt_obj && Object.values(window._tapita_ssr_ijt_obj||{}).forEach(function (t){t&&t()})};
+        _tapita_ssr_cti();
+        if(!globalThis._tpt_pbds){globalThis._tpt_pbds=[]};
+        globalThis._tpt_pbds.push(_tapita_ssr_cti);
+        window.addEventListener("resize", ()=>{_tapita_ssr_cti()});
+        ;
+                        var documentFragment = document.createDocumentFragment();
+                        tapitaSections.forEach(function(el){documentFragment.appendChild(el)});
+                        document.querySelector("#" + idToRender).appendChild(documentFragment);
+                        tapitaSections = null;
+                        clearInterval(injector);
+                    } else if (tapita_counter > 60) {
+                        clearInterval(injector);
+                    }
+                }, 100);
+            </script>
+        </div>
+
+        <div class="tel">
+        {% for field in content.value %}
+          {% if field.type == "product_grid" %}
+          {% render 'tapita-product-grid',
+                    product_target_ident: field.settings.product_target_ident,
+                    product_handle: field.settings.product-handle,
+                    product_handles: field.settings.product-handles,
+                    product_ident: field.settings.product_ident,
+                    product_title: field.settings.product-title,
+                    product_limit: field.settings.product-limit,
+                    evenlyHeight: field.settings.evenlyHeight
+          %}
+          {% elsif field.type == "product_scroll" %}
+          {% render 'tapita-product-list',
+                    product_target_ident: field.settings.product_target_ident,
+                    product_handle: field.settings.product-handle,
+                    product_handles: field.settings.product-handles,
+                    product_ident: field.settings.product_ident,
+                    product_title: field.settings.product-title,
+                    product_limit: field.settings.product-limit,
+          %}
+          {% endif %}
+          {% endfor %}
+        </div>
+        {% assign __very_mysterious_product = product %}{% assign __very_mysterious_collection = collection %}{% assign __very_mysterious_collections = collections %}{%- assign tzzz_0_aa2f7e = "Missing collection" -%} {%- assign tzzz_0_aa2f7e_1 = tzzz_0_aa2f7e | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_0_aa2f7e_2 = tzzz_0_aa2f7e_1 | slice: 0,20 | downcase -%} {%- if tzzz_0_aa2f7e_2 != 'translation missing:' -%}{%- assign tzzz_0_aa2f7e = tzzz_0_aa2f7e_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_1_d7778d = "Filter" -%} {%- assign tzzz_1_d7778d_1 = tzzz_1_d7778d | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_1_d7778d_2 = tzzz_1_d7778d_1 | slice: 0,20 | downcase -%} {%- if tzzz_1_d7778d_2 != 'translation missing:' -%}{%- assign tzzz_1_d7778d = tzzz_1_d7778d_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_2_e75ab1 = "FILTER" -%} {%- assign tzzz_2_e75ab1_1 = tzzz_2_e75ab1 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_2_e75ab1_2 = tzzz_2_e75ab1_1 | slice: 0,20 | downcase -%} {%- if tzzz_2_e75ab1_2 != 'translation missing:' -%}{%- assign tzzz_2_e75ab1 = tzzz_2_e75ab1_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_3_15422d = "Featured" -%} {%- assign tzzz_3_15422d_1 = tzzz_3_15422d | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_3_15422d_2 = tzzz_3_15422d_1 | slice: 0,20 | downcase -%} {%- if tzzz_3_15422d_2 != 'translation missing:' -%}{%- assign tzzz_3_15422d = tzzz_3_15422d_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_4_3b0810 = "Best-selling" -%} {%- assign tzzz_4_3b0810_1 = tzzz_4_3b0810 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_4_3b0810_2 = tzzz_4_3b0810_1 | slice: 0,20 | downcase -%} {%- if tzzz_4_3b0810_2 != 'translation missing:' -%}{%- assign tzzz_4_3b0810 = tzzz_4_3b0810_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_5_d656c7 = "Alphabetically, A-Z" -%} {%- assign tzzz_5_d656c7_1 = tzzz_5_d656c7 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_5_d656c7_2 = tzzz_5_d656c7_1 | slice: 0,20 | downcase -%} {%- if tzzz_5_d656c7_2 != 'translation missing:' -%}{%- assign tzzz_5_d656c7 = tzzz_5_d656c7_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_6_2a2247 = "Alphabetically, Z-A" -%} {%- assign tzzz_6_2a2247_1 = tzzz_6_2a2247 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_6_2a2247_2 = tzzz_6_2a2247_1 | slice: 0,20 | downcase -%} {%- if tzzz_6_2a2247_2 != 'translation missing:' -%}{%- assign tzzz_6_2a2247 = tzzz_6_2a2247_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_7_e2174d = "Price, low to high" -%} {%- assign tzzz_7_e2174d_1 = tzzz_7_e2174d | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_7_e2174d_2 = tzzz_7_e2174d_1 | slice: 0,20 | downcase -%} {%- if tzzz_7_e2174d_2 != 'translation missing:' -%}{%- assign tzzz_7_e2174d = tzzz_7_e2174d_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_8_0ee819 = "Price, high to low" -%} {%- assign tzzz_8_0ee819_1 = tzzz_8_0ee819 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_8_0ee819_2 = tzzz_8_0ee819_1 | slice: 0,20 | downcase -%} {%- if tzzz_8_0ee819_2 != 'translation missing:' -%}{%- assign tzzz_8_0ee819 = tzzz_8_0ee819_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_9_eeb6d5 = "Date, old to new" -%} {%- assign tzzz_9_eeb6d5_1 = tzzz_9_eeb6d5 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_9_eeb6d5_2 = tzzz_9_eeb6d5_1 | slice: 0,20 | downcase -%} {%- if tzzz_9_eeb6d5_2 != 'translation missing:' -%}{%- assign tzzz_9_eeb6d5 = tzzz_9_eeb6d5_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_10_17bc2f = "Date, new to old" -%} {%- assign tzzz_10_17bc2f_1 = tzzz_10_17bc2f | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_10_17bc2f_2 = tzzz_10_17bc2f_1 | slice: 0,20 | downcase -%} {%- if tzzz_10_17bc2f_2 != 'translation missing:' -%}{%- assign tzzz_10_17bc2f = tzzz_10_17bc2f_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_11_cdd7ea = "By Price" -%} {%- assign tzzz_11_cdd7ea_1 = tzzz_11_cdd7ea | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_11_cdd7ea_2 = tzzz_11_cdd7ea_1 | slice: 0,20 | downcase -%} {%- if tzzz_11_cdd7ea_2 != 'translation missing:' -%}{%- assign tzzz_11_cdd7ea = tzzz_11_cdd7ea_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_12_8ba666 = "Min:" -%} {%- assign tzzz_12_8ba666_1 = tzzz_12_8ba666 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_12_8ba666_2 = tzzz_12_8ba666_1 | slice: 0,20 | downcase -%} {%- if tzzz_12_8ba666_2 != 'translation missing:' -%}{%- assign tzzz_12_8ba666 = tzzz_12_8ba666_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_13_9ace3e = "Max:" -%} {%- assign tzzz_13_9ace3e_1 = tzzz_13_9ace3e | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_13_9ace3e_2 = tzzz_13_9ace3e_1 | slice: 0,20 | downcase -%} {%- if tzzz_13_9ace3e_2 != 'translation missing:' -%}{%- assign tzzz_13_9ace3e = tzzz_13_9ace3e_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_14_18823b = "Products Found" -%} {%- assign tzzz_14_18823b_1 = tzzz_14_18823b | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_14_18823b_2 = tzzz_14_18823b_1 | slice: 0,20 | downcase -%} {%- if tzzz_14_18823b_2 != 'translation missing:' -%}{%- assign tzzz_14_18823b = tzzz_14_18823b_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_15_068f80 = "Products" -%} {%- assign tzzz_15_068f80_1 = tzzz_15_068f80 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_15_068f80_2 = tzzz_15_068f80_1 | slice: 0,20 | downcase -%} {%- if tzzz_15_068f80_2 != 'translation missing:' -%}{%- assign tzzz_15_068f80 = tzzz_15_068f80_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_16_757bff = "Clear All Filter" -%} {%- assign tzzz_16_757bff_1 = tzzz_16_757bff | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_16_757bff_2 = tzzz_16_757bff_1 | slice: 0,20 | downcase -%} {%- if tzzz_16_757bff_2 != 'translation missing:' -%}{%- assign tzzz_16_757bff = tzzz_16_757bff_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_17_cc1cbe = "No products were found matching your selection." -%} {%- assign tzzz_17_cc1cbe_1 = tzzz_17_cc1cbe | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_17_cc1cbe_2 = tzzz_17_cc1cbe_1 | slice: 0,20 | downcase -%} {%- if tzzz_17_cc1cbe_2 != 'translation missing:' -%}{%- assign tzzz_17_cc1cbe = tzzz_17_cc1cbe_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_18_c91e4e = "Quick view" -%} {%- assign tzzz_18_c91e4e_1 = tzzz_18_c91e4e | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_18_c91e4e_2 = tzzz_18_c91e4e_1 | slice: 0,20 | downcase -%} {%- if tzzz_18_c91e4e_2 != 'translation missing:' -%}{%- assign tzzz_18_c91e4e = tzzz_18_c91e4e_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_19_13b9a6 = "Missing product" -%} {%- assign tzzz_19_13b9a6_1 = tzzz_19_13b9a6 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_19_13b9a6_2 = tzzz_19_13b9a6_1 | slice: 0,20 | downcase -%} {%- if tzzz_19_13b9a6_2 != 'translation missing:' -%}{%- assign tzzz_19_13b9a6 = tzzz_19_13b9a6_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_20_084f4c = "UNAVAILABLE" -%} {%- assign tzzz_20_084f4c_1 = tzzz_20_084f4c | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_20_084f4c_2 = tzzz_20_084f4c_1 | slice: 0,20 | downcase -%} {%- if tzzz_20_084f4c_2 != 'translation missing:' -%}{%- assign tzzz_20_084f4c = tzzz_20_084f4c_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_21_10a9e5 = "ADD TO CART" -%} {%- assign tzzz_21_10a9e5_1 = tzzz_21_10a9e5 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_21_10a9e5_2 = tzzz_21_10a9e5_1 | slice: 0,20 | downcase -%} {%- if tzzz_21_10a9e5_2 != 'translation missing:' -%}{%- assign tzzz_21_10a9e5 = tzzz_21_10a9e5_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_22_cb68ae = "OUT OF STOCK" -%} {%- assign tzzz_22_cb68ae_1 = tzzz_22_cb68ae | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_22_cb68ae_2 = tzzz_22_cb68ae_1 | slice: 0,20 | downcase -%} {%- if tzzz_22_cb68ae_2 != 'translation missing:' -%}{%- assign tzzz_22_cb68ae = tzzz_22_cb68ae_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_23_2d0f6b = "Add to cart" -%} {%- assign tzzz_23_2d0f6b_1 = tzzz_23_2d0f6b | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_23_2d0f6b_2 = tzzz_23_2d0f6b_1 | slice: 0,20 | downcase -%} {%- if tzzz_23_2d0f6b_2 != 'translation missing:' -%}{%- assign tzzz_23_2d0f6b = tzzz_23_2d0f6b_1 -%}{%- else -%}{%- endif -%} {% assign collection_handle = "frontpage" %} {% assign limit = "20" %} {% assign titleTextColor = "#062c59" %} {% assign titleFontSize = "14px" %} {% assign titleFontWeight = 600 %} {% assign priceDefaultTextColor = "#878787" %} {% assign priceDefaultFontSize = "14px" %} {% assign priceDefaultFontWeight = 400 %} {% assign priceSaleTextColor = "#ec0101" %} {% assign priceSaleFontSize = "14px" %} {% assign priceSaleFontWeight = 400 %} {% assign percentTextColor = "#fff" %} {% assign percentTextFontSize = "12px" %} {% assign percentTextFontWeight = 400 %} {% assign percentBackgroundColor = "#f68e57" %} {% assign buttonTextColor = "#fff" %} {% assign buttonFontSize = "14px" %} {% assign buttonFontWeight = 400 %} {% assign buttonBackgroundColor = "#f68e57" %} {% assign filterType = "grid" %} {% assign actionType = "quickview" %} {% assign filterTurnOn = true %} {% assign sortTurnOn = true %} {% assign shopPayTurnOn = true %} {% assign quickViewTranslation = "Quick view" %} {% assign addToCartTranslation = "ADD TO CART" %} {% assign unavailableTranslation = "UNAVAILABLE" %} {% assign outOfStockTranslation = "OUT OF STOCK" %} {% assign filterTranslation = "Filter" %} {% assign productsTranslation = "Products" %} {% assign productFoundTranslation = "Products Found" %} {% assign clearAllFilterTranslation = "Clear All Filter" %} {% assign availabilityTranslation = "Availability" %} {% assign tagsTranslation = "Tags" %} {% assign byPriceTranslation = "By Price" %} {% assign productTypeTranslation = "Product type" %} {% assign colorTranslation = "Color" %} {% assign materialTranslation = "Material" %} {% assign sizeTranslation = "Size" %} {% assign featuredTranslation = "Featured" %} {% assign bestSellingTranslation = "Best-selling" %} {% assign alphabeticallyAZTranslation = "Alphabetically, A-Z" %} {% assign alphabeticallyZATranslation = "Alphabetically, Z-A" %} {% assign priceLowToHighTranslation = "Price, low to high" %} {% assign priceHighToLowTranslation = "Price, high to low" %} {% assign dateOldToNewTranslation = "Date, old to new" %} {% assign dateNewToOldTranslation = "Date, new to old" %}{% paginate collection.products by limit %}{% unless product %}{% assign product = all_products[""] %} {% endunless %}<div style="display: none" class="exrt2454_ctn_v1">{% render "tpt_atl_263f503bd25331", tzzz_0_aa2f7e : tzzz_0_aa2f7e , tzzz_1_d7778d : tzzz_1_d7778d , tzzz_2_e75ab1 : tzzz_2_e75ab1 , tzzz_3_15422d : tzzz_3_15422d , tzzz_4_3b0810 : tzzz_4_3b0810 , tzzz_5_d656c7 : tzzz_5_d656c7 , tzzz_6_2a2247 : tzzz_6_2a2247 , tzzz_7_e2174d : tzzz_7_e2174d , tzzz_8_0ee819 : tzzz_8_0ee819 , tzzz_9_eeb6d5 : tzzz_9_eeb6d5 , tzzz_10_17bc2f : tzzz_10_17bc2f , tzzz_11_cdd7ea : tzzz_11_cdd7ea , tzzz_12_8ba666 : tzzz_12_8ba666 , tzzz_13_9ace3e : tzzz_13_9ace3e , tzzz_14_18823b : tzzz_14_18823b , tzzz_15_068f80 : tzzz_15_068f80 , tzzz_16_757bff : tzzz_16_757bff , tzzz_17_cc1cbe : tzzz_17_cc1cbe , tzzz_18_c91e4e : tzzz_18_c91e4e , tzzz_19_13b9a6 : tzzz_19_13b9a6 , tzzz_20_084f4c : tzzz_20_084f4c , tzzz_21_10a9e5 : tzzz_21_10a9e5 , tzzz_22_cb68ae : tzzz_22_cb68ae , tzzz_23_2d0f6b : tzzz_23_2d0f6b ,collection_handle:"",limit:"20",titleTextColor:"#062c59",titleFontSize:"14px",titleFontWeight:600,priceDefaultTextColor:"#878787",priceDefaultFontSize:"14px",priceDefaultFontWeight:400,priceSaleTextColor:"#ec0101",priceSaleFontSize:"14px",priceSaleFontWeight:400,percentTextColor:"#fff",percentTextFontSize:"12px",percentTextFontWeight:400,percentBackgroundColor:"#f68e57",buttonTextColor:"#fff",buttonFontSize:"14px",buttonFontWeight:400,buttonBackgroundColor:"#f68e57",filterType:"grid",actionType:"quickview",filterTurnOn:true,sortTurnOn:true,shopPayTurnOn:true,quickViewTranslation:"Quick view",addToCartTranslation:"ADD TO CART",unavailableTranslation:"UNAVAILABLE",outOfStockTranslation:"OUT OF STOCK",filterTranslation:"Filter",productsTranslation:"Products",productFoundTranslation:"Products Found",clearAllFilterTranslation:"Clear All Filter",availabilityTranslation:"Availability",tagsTranslation:"Tags",byPriceTranslation:"By Price",productTypeTranslation:"Product type",colorTranslation:"Color",materialTranslation:"Material",sizeTranslation:"Size",featuredTranslation:"Featured",bestSellingTranslation:"Best-selling",alphabeticallyAZTranslation:"Alphabetically, A-Z",alphabeticallyZATranslation:"Alphabetically, Z-A",priceLowToHighTranslation:"Price, low to high",priceHighToLowTranslation:"Price, high to low",dateOldToNewTranslation:"Date, old to new",dateNewToOldTranslation:"Date, new to old", collection : collection , products : collection.products , pageData : paginate , filterData : collection.filters ,id: "t_2454" ,ident_1: "xYWiG9WP2TGFF3eqGwrmzwGfeZUJWPZ3qN6CQgjKAAJtwyaCmz1xCyQPibUno\/N+9pG8qsJAMvnF1pbmAcyhfA==" ,ident_2: "https:\/\/tapita.io\/pb\/"  %}{% render "tpt_atl_263f503bd25331_1", tzzz_0_aa2f7e : tzzz_0_aa2f7e , tzzz_1_d7778d : tzzz_1_d7778d , tzzz_2_e75ab1 : tzzz_2_e75ab1 , tzzz_3_15422d : tzzz_3_15422d , tzzz_4_3b0810 : tzzz_4_3b0810 , tzzz_5_d656c7 : tzzz_5_d656c7 , tzzz_6_2a2247 : tzzz_6_2a2247 , tzzz_7_e2174d : tzzz_7_e2174d , tzzz_8_0ee819 : tzzz_8_0ee819 , tzzz_9_eeb6d5 : tzzz_9_eeb6d5 , tzzz_10_17bc2f : tzzz_10_17bc2f , tzzz_11_cdd7ea : tzzz_11_cdd7ea , tzzz_12_8ba666 : tzzz_12_8ba666 , tzzz_13_9ace3e : tzzz_13_9ace3e , tzzz_14_18823b : tzzz_14_18823b , tzzz_15_068f80 : tzzz_15_068f80 , tzzz_16_757bff : tzzz_16_757bff , tzzz_17_cc1cbe : tzzz_17_cc1cbe , tzzz_18_c91e4e : tzzz_18_c91e4e , tzzz_19_13b9a6 : tzzz_19_13b9a6 , tzzz_20_084f4c : tzzz_20_084f4c , tzzz_21_10a9e5 : tzzz_21_10a9e5 , tzzz_22_cb68ae : tzzz_22_cb68ae , tzzz_23_2d0f6b : tzzz_23_2d0f6b ,collection_handle:"",limit:"20",titleTextColor:"#062c59",titleFontSize:"14px",titleFontWeight:600,priceDefaultTextColor:"#878787",priceDefaultFontSize:"14px",priceDefaultFontWeight:400,priceSaleTextColor:"#ec0101",priceSaleFontSize:"14px",priceSaleFontWeight:400,percentTextColor:"#fff",percentTextFontSize:"12px",percentTextFontWeight:400,percentBackgroundColor:"#f68e57",buttonTextColor:"#fff",buttonFontSize:"14px",buttonFontWeight:400,buttonBackgroundColor:"#f68e57",filterType:"grid",actionType:"quickview",filterTurnOn:true,sortTurnOn:true,shopPayTurnOn:true,quickViewTranslation:"Quick view",addToCartTranslation:"ADD TO CART",unavailableTranslation:"UNAVAILABLE",outOfStockTranslation:"OUT OF STOCK",filterTranslation:"Filter",productsTranslation:"Products",productFoundTranslation:"Products Found",clearAllFilterTranslation:"Clear All Filter",availabilityTranslation:"Availability",tagsTranslation:"Tags",byPriceTranslation:"By Price",productTypeTranslation:"Product type",colorTranslation:"Color",materialTranslation:"Material",sizeTranslation:"Size",featuredTranslation:"Featured",bestSellingTranslation:"Best-selling",alphabeticallyAZTranslation:"Alphabetically, A-Z",alphabeticallyZATranslation:"Alphabetically, Z-A",priceLowToHighTranslation:"Price, low to high",priceHighToLowTranslation:"Price, high to low",dateOldToNewTranslation:"Date, old to new",dateNewToOldTranslation:"Date, new to old", collection : collection , products : collection.products , pageData : paginate , filterData : collection.filters ,id: "t_2454" ,ident_1: "xYWiG9WP2TGFF3eqGwrmzwGfeZUJWPZ3qN6CQgjKAAJtwyaCmz1xCyQPibUno\/N+9pG8qsJAMvnF1pbmAcyhfA==" ,ident_2: "https:\/\/tapita.io\/pb\/"  %}</div><script>dynamicAttach(2454,"exrt2454_ctn_v1");if(!globalThis._tpt_pbds){globalThis._tpt_pbds=[]};
+                globalThis._tpt_pbds.push(function(){
+                dynamicAttach(2454,"exrt2454_ctn_v1", true);
+            });</script>{% endpaginate %}{% assign product = __very_mysterious_product %}{% assign collection = __very_mysterious_collection %}{% assign collections = __very_mysterious_collections %}

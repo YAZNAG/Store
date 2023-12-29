@@ -1,0 +1,216 @@
+<script>window.__tpt_full_page = 1</script><script class='tpt_dynamic'>
+function dynamicAttach(itemId, containerId, override) {
+    if (!window.__tpt_everlasting_cache) {
+        window.__tpt_everlasting_cache = {};
+    }
+    
+    var slt = '.spb-item.type_actual_statement.spb-item-id_' + itemId;
+    var targetElement = document.querySelector(slt);
+    var containerElement = document.querySelector('.' + containerId);
+    console.log(targetElement, containerElement);
+    if (containerElement && (containerElement.innerHTML).trim().length > 0) {
+            window.__tpt_everlasting_cache[slt] = containerElement.innerHTML;
+    }
+    if ((targetElement && (!targetElement.innerHTML.length || override)) && ((containerElement && (containerElement.innerHTML).trim() || window.__tpt_everlasting_cache[slt]))) {
+        console.log('Found container element');
+    console.log(itemId, containerId);    
+        if (containerElement && (containerElement.innerHTML).trim().length > 0) {
+            var tpt_rerun = containerElement.querySelectorAll('script.tpt_rerun, script.tpt_inject_script');
+            if (containerElement.childNodes) {
+                Array.from(containerElement.childNodes).forEach(function(node) {
+                    targetElement.append(node);
+                });
+            }
+            tpt_rerun.forEach(function(t) {
+                Function(t.innerText)()
+            });
+        } else if (window.__tpt_everlasting_cache[slt]) {
+            targetElement.innerHTML = window.__tpt_everlasting_cache[slt];
+            var tpt_rerun = targetElement.querySelectorAll('script.tpt_rerun, script.tpt_inject_script');
+            tpt_rerun.forEach(function(t) {
+                Function(t.innerText)()
+            });
+        } else if (targetElement && containerElement && targetElement.innerHTML.length) {
+            console.log('Already attached', slt);
+    }
+}
+        if (!window._tapita_ssr_ijt_obj) {
+            window._tapita_ssr_ijt_obj = {};
+        }
+        window._tapita_ssr_ijt_obj[slt] = function() {
+            return dynamicAttach(itemId, containerId, override)
+        };
+    
+}
+</script>
+<script>window._issolate_tapita_hamburger = true;</script>
+
+        <style>
+                .type_actual_statement{width: 100%}
+        </style>
+        {% assign content = page.metafields.tapita["any"] %}
+        
+        <div id="tapita-page-main-content" style="min-height: 100vh; display: block">
+          <h1 class="tapita-placeholder" style="display:none;">
+            "", 1
+          </h1>
+        </div>
+
+        
+        <div class="rte">
+            <script>
+                try {
+                    var _tpt_insigna = "14000e138bbd3058197a9002d5db9416";
+                    if(!globalThis._tpt_pbds){
+                        globalThis._tpt_pbds = [];
+                    }
+                }catch(e){
+                    console.warn(e);
+                }
+                var tapitacss = `#shopify-section-tapita-main-page, #shopify-section-tapita-main-home { min-height: 100vh; } .main.content { max-width: unset; } .spb-item-root {width: 100%;} h1.main-page-title.page-title {display: none;} .spb-item.type_text {overflow-y: hidden;} `;
+                var tapitahead = document.head || document.getElementsByTagName("head")[0];
+                var tapitastyle = document.createElement("style");
+
+                tapitastyle.type = "text/css";
+                if (tapitastyle.styleSheet){
+                    tapitastyle.styleSheet.cssText = tapitacss;
+                } else {
+                    tapitastyle.appendChild(document.createTextNode(tapitacss));
+                }
+                tapitastyle.class="tapita-custom-css";
+                 
+                var tapitajs = ``;
+                var tapitascript = document.createElement("script");
+                tapitascript.appendChild(document.createTextNode(tapitajs));
+                tapitascript.defer = true;
+                tapitascript.class="tapita-custom-css";
+
+                tapitahead.appendChild(tapitastyle);
+                tapitahead.appendChild(tapitascript);
+                {% if request.page_type == "product" %}
+                    var kulasop  = 9;
+                {% endif %}
+            </script>
+            
+            {{ 'tapita-cdn-assets-1.6.37.js' | asset_url | script_tag }}
+             
+            <script defer>
+                var tapita_counter = 0;
+                var possibleMainTargetQuery = [
+                    
+                    "#tapita-page-main-content",
+                    ".normal_main_content",
+                    "#MainContent",
+                    "shopify-section-tapita-main-page",
+                    "shopify-section-tapita-main-home",
+                    "main",
+                ];
+                {% if request.page_type == "product" %}
+                    var kulasop  = 2;
+                {% endif %}
+              
+                var currentMain = null;
+                for (const selector of possibleMainTargetQuery) {
+                    currentMain = document.querySelector(selector);
+                    if(currentMain){
+                        break;
+                    }
+                }
+                var injector = setInterval(function () {
+                    var idToRender = false;
+                    var mainTarget = null;
+                    for (const selector of possibleMainTargetQuery) {
+                        mainTarget = document.querySelector(selector);
+                        if(mainTarget){
+                            break;
+                        }
+                    }
+                    if(currentMain && currentMain.id !=="MainContent"){
+                        currentMain.id = "MainContentTapita";
+                        idToRender = "MainContentTapita";
+                    }
+                    
+                    if (!idToRender)
+                        return;
+                    {% if request.page_type == "product" %}
+                        var licobioga  = 97;
+                    {% endif %}
+                    tapita_counter += 1;
+                    if (globalThis.PageBuilderComponent) {
+                        var tapitaSections = document.querySelectorAll(".tapitaSection, .spb-customerhtml-serverrender");
+                        currentMain = null;
+                        function tptPBD(forcedRerender){
+                            var lemonadeConsumer = document.querySelector(`#${idToRender} .smpb-container`);
+                            if(lemonadeConsumer && lemonadeConsumer.innerHTML  && !forcedRerender){
+                                return;
+                            }
+                            PageBuilderComponent.renderForIdWithProps(idToRender, {
+                            endPoint: "https://tapita.io/pb/graphql/",
+                            mode: "shopify",
+                            lazyloadPlaceHolder: " ",
+                            formatMessage: globalThis._rms_translate,
+                            _translateParagraph: true,
+                            _translateSEO: true,
+                            _translatePlaceholder: true,
+                            callback: function() { try { if (globalThis.PageBuilderComponent && globalThis._tpt_pbds && (globalThis._tpt_pbds instanceof Array)) globalThis._tpt_pbds.forEach(t => t && t()); } catch (e) { } },
+                            pageData: {"apply_to":"product_handle,professional-power-clipper-precision-at-your-fingertips","priority":10,"entity_id":15222,"name":"Professional Power Clipper","status":1,"masked_id":"21740NVUicnyxdx6Nxi2SWtlF1702554372","custom_css":"\n \n .spb-item,.tpt_inject_target.not-flow{\r\n\toverflow: unset !important;\r\n}\r\n\n \n .spb-item,.tpt_inject_target.not-flow{\r\n\toverflow: unset !important;\r\n}","custom_js":null,"keywords":null,"title":"","desc":"","is_rtl":0,"storeview_visibility":"","publish_items":"[{\"entity_id\":4685,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"paddingTop\\\":\\\"0px\\\",\\\"paddingBottom\\\":\\\"0px\\\",\\\"paddingLeft\\\":\\\"0px\\\",\\\"paddingRight\\\":\\\"0px\\\",\\\"flexDirection\\\":\\\"row\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\"}\",\"data\":\"{}\",\"name\":\"Product Thumb on Right\",\"tag_id\":\"pbi_VDE3MHIxNjg1NTg4NjM5MDY2_39066\",\"class_name\":\"\",\"type\":\"actual_statement\",\"visibility\":\"\",\"sort_order\":20,\"parent_id\":4681,\"storeview_visibility\":\"\"},{\"entity_id\":4681,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"display\\\":\\\"block\\\",\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":\\\"20px\\\",\\\"paddingBottom\\\":\\\"20px\\\",\\\"paddingLeft\\\":\\\"15px\\\",\\\"paddingRight\\\":\\\"15px\\\",\\\"minHeight\\\":100,\\\"justifyContent\\\":\\\"center\\\"}\",\"data\":\"{\\\"layoutMarker\\\":2}\",\"name\":\"\",\"tag_id\":\"pbi_RmZSYkkxNjgzNjI1MjE4OTM3_18937\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":40,\"parent_id\":0,\"storeview_visibility\":\"\"},{\"entity_id\":4609,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"maxWidth\\\":\\\"1280px\\\",\\\"flexDirection\\\":\\\"row\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\"}\",\"data\":\"{}\",\"name\":\"Recommendation\",\"tag_id\":\"pbi_QkxKSmoxNjc3ODMwMzMyOTc1_32976\",\"class_name\":\"\",\"type\":\"actual_statement\",\"visibility\":\"\",\"sort_order\":60,\"parent_id\":4595,\"storeview_visibility\":\"\"},{\"entity_id\":4577,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"column\\\",\\\"widthPercent\\\":100,\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"objectFit\\\":\\\"contain\\\",\\\"objectPosition\\\":\\\"center center\\\",\\\"heightPixel\\\":100}\",\"data\":\"{\\\"image\\\":\\\"https:\\\\\\\/\\\\\\\/tapita.io\\\\\\\/pb\\\\\\\/pub\\\\\\\/media\\\\\\\/spb\\\\\\\/usr\\\\\\\/8242\\\\\\\/oti\\\\\\\/1587534222000\\\\\\\/FeeShippingBadge.png\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_eGtDZ0QxNjcwNjg5Mjk2MDQ0_96044\",\"class_name\":\"\",\"type\":\"image\",\"visibility\":\"\",\"sort_order\":70,\"parent_id\":4576,\"storeview_visibility\":\"0\"},{\"entity_id\":4579,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"column\\\",\\\"widthPercent\\\":100,\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"objectFit\\\":\\\"contain\\\",\\\"objectPosition\\\":\\\"center center\\\",\\\"heightPixel\\\":100}\",\"data\":\"{\\\"image\\\":\\\"https:\\\\\\\/\\\\\\\/tapita.io\\\\\\\/pb\\\\\\\/pub\\\\\\\/media\\\\\\\/spb\\\\\\\/usr\\\\\\\/8242\\\\\\\/oti\\\\\\\/1587534220000\\\\\\\/Money-backGuaranteeBadge.png\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_eGtDZ0QxNjcwNjg5Mjk2MDQ0_96044\",\"class_name\":\"\",\"type\":\"image\",\"visibility\":\"\",\"sort_order\":80,\"parent_id\":4578,\"storeview_visibility\":\"0\"},{\"entity_id\":4581,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"column\\\",\\\"widthPercent\\\":100,\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"objectFit\\\":\\\"contain\\\",\\\"objectPosition\\\":\\\"center center\\\",\\\"heightPixel\\\":100}\",\"data\":\"{\\\"image\\\":\\\"https:\\\\\\\/\\\\\\\/tapita.io\\\\\\\/pb\\\\\\\/pub\\\\\\\/media\\\\\\\/spb\\\\\\\/usr\\\\\\\/8242\\\\\\\/oti\\\\\\\/1587534224000\\\\\\\/PremiumQualityBadge.png\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_eGtDZ0QxNjcwNjg5Mjk2MDQ0_96044\",\"class_name\":\"\",\"type\":\"image\",\"visibility\":\"\",\"sort_order\":90,\"parent_id\":4580,\"storeview_visibility\":\"0\"},{\"entity_id\":4583,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"column\\\",\\\"widthPercent\\\":100,\\\"maxWidth\\\":\\\"1280px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"objectFit\\\":\\\"contain\\\",\\\"objectPosition\\\":\\\"center center\\\",\\\"heightPixel\\\":100}\",\"data\":\"{\\\"image\\\":\\\"https:\\\\\\\/\\\\\\\/tapita.io\\\\\\\/pb\\\\\\\/pub\\\\\\\/media\\\\\\\/spb\\\\\\\/usr\\\\\\\/8242\\\\\\\/oti\\\\\\\/1587534222000\\\\\\\/SecurePaymentBadge.png\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_eGtDZ0QxNjcwNjg5Mjk2MDQ0_96044\",\"class_name\":\"\",\"type\":\"image\",\"visibility\":\"\",\"sort_order\":100,\"parent_id\":4582,\"storeview_visibility\":\"0\"},{\"entity_id\":4576,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\",\\\"minHeight\\\":100}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":110,\"parent_id\":4575,\"storeview_visibility\":\"0\"},{\"entity_id\":4578,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\",\\\"minHeight\\\":100}\",\"data\":null,\"name\":\"\",\"tag_id\":\"pbi_OGxHSUwxNjcwNjg5MzMwNTM2_30536\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":120,\"parent_id\":4575,\"storeview_visibility\":\"0\"},{\"entity_id\":4580,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\",\\\"minHeight\\\":100}\",\"data\":null,\"name\":\"\",\"tag_id\":\"pbi_RmhrZUQxNjcwNjg5MzMwMTAy_30102\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":130,\"parent_id\":4575,\"storeview_visibility\":\"0\"},{\"entity_id\":4582,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\",\\\"minHeight\\\":100}\",\"data\":null,\"name\":\"\",\"tag_id\":\"pbi_VlBYT0YxNjcwNjg5MzI5NTUz_29553\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":140,\"parent_id\":4575,\"storeview_visibility\":\"0\"},{\"entity_id\":4575,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"display\\\":\\\"grid\\\",\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":\\\"20px\\\",\\\"paddingBottom\\\":\\\"20px\\\",\\\"paddingLeft\\\":\\\"15px\\\",\\\"paddingRight\\\":\\\"15px\\\",\\\"minHeight\\\":100,\\\"justifyContent\\\":\\\"center\\\",\\\"columnGap\\\":\\\"15px\\\",\\\"rowGap\\\":\\\"15px\\\",\\\"gridTemplateColumns\\\":\\\"1fr 1fr 1fr 1fr\\\",\\\"t_gridTemplateColumns\\\":\\\"1fr 1fr 1fr 1fr\\\",\\\"m_gridTemplateColumns\\\":\\\"1fr 1fr\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"t_maxWidth\\\":\\\"1024px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\"}\",\"data\":\"{\\\"layoutMarker\\\":2}\",\"name\":\"\",\"tag_id\":\"pbi_cTIwQ2IxNjc3NTY2MDg4Mjcx_88271\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":150,\"parent_id\":0,\"storeview_visibility\":\"\"},{\"entity_id\":4595,\"page_id\":\"15222\",\"status\":1,\"styles\":\"{\\\"display\\\":\\\"block\\\",\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":\\\"20px\\\",\\\"paddingBottom\\\":\\\"20px\\\",\\\"paddingLeft\\\":\\\"15px\\\",\\\"paddingRight\\\":\\\"15px\\\",\\\"minHeight\\\":100,\\\"justifyContent\\\":\\\"center\\\"}\",\"data\":\"{\\\"layoutMarker\\\":2}\",\"name\":\"\",\"tag_id\":\"pbi_Vnp5RXgxNjc3Njg2NzAxOTIw_01920\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":160,\"parent_id\":0,\"storeview_visibility\":\"\"}]","type_id":0,"url_path":"","updated_at":"2023-12-17 14:05:00","published_at":"2023-12-14 11:46:12","image":"https:\/\/tapita.io\/pb\/pub\/media\/spb\/usr\/1\/6644\/PBPAGEIMAGE.png"}
+                            });
+                        }
+                        globalThis._tpt_pbds.push(tptPBD);
+                        tptPBD();
+                        
+        function _tapita_ssr_cti(){window._tapita_ssr_ijt_obj && Object.values(window._tapita_ssr_ijt_obj||{}).forEach(function (t){t&&t()})};
+        _tapita_ssr_cti();
+        if(!globalThis._tpt_pbds){globalThis._tpt_pbds=[]};
+        globalThis._tpt_pbds.push(_tapita_ssr_cti);
+        window.addEventListener("resize", ()=>{_tapita_ssr_cti()});
+        ;
+                        var documentFragment = document.createDocumentFragment();
+                        tapitaSections.forEach(function(el){documentFragment.appendChild(el)});
+                        document.querySelector("#" + idToRender).appendChild(documentFragment);
+                        tapitaSections = null;
+                        clearInterval(injector);
+                    } else if (tapita_counter > 60) {
+                        clearInterval(injector);
+                    }
+                }, 100);
+            </script>
+        </div>
+
+        <div class="tel">
+        {% for field in content.value %}
+          {% if field.type == "product_grid" %}
+          {% render 'tapita-product-grid',
+                    product_target_ident: field.settings.product_target_ident,
+                    product_handle: field.settings.product-handle,
+                    product_handles: field.settings.product-handles,
+                    product_ident: field.settings.product_ident,
+                    product_title: field.settings.product-title,
+                    product_limit: field.settings.product-limit,
+                    evenlyHeight: field.settings.evenlyHeight
+          %}
+          {% elsif field.type == "product_scroll" %}
+          {% render 'tapita-product-list',
+                    product_target_ident: field.settings.product_target_ident,
+                    product_handle: field.settings.product-handle,
+                    product_handles: field.settings.product-handles,
+                    product_ident: field.settings.product_ident,
+                    product_title: field.settings.product-title,
+                    product_limit: field.settings.product-limit,
+          %}
+          {% endif %}
+          {% endfor %}
+        </div>
+        {% assign __very_mysterious_product = product %}{% assign __very_mysterious_collection = collection %}{% assign __very_mysterious_collections = collections %}{%- assign tzzz_0_13b9a6 = "Missing product" -%} {%- assign tzzz_0_13b9a6_1 = tzzz_0_13b9a6 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_0_13b9a6_2 = tzzz_0_13b9a6_1 | slice: 0,20 | downcase -%} {%- if tzzz_0_13b9a6_2 != 'translation missing:' -%}{%- assign tzzz_0_13b9a6 = tzzz_0_13b9a6_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_1_69d08b = "In Stock" -%} {%- assign tzzz_1_69d08b_1 = tzzz_1_69d08b | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_1_69d08b_2 = tzzz_1_69d08b_1 | slice: 0,20 | downcase -%} {%- if tzzz_1_69d08b_2 != 'translation missing:' -%}{%- assign tzzz_1_69d08b = tzzz_1_69d08b_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_2_469b47 = "Out Stock" -%} {%- assign tzzz_2_469b47_1 = tzzz_2_469b47 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_2_469b47_2 = tzzz_2_469b47_1 | slice: 0,20 | downcase -%} {%- if tzzz_2_469b47_2 != 'translation missing:' -%}{%- assign tzzz_2_469b47 = tzzz_2_469b47_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_3_146ffe = "Show more" -%} {%- assign tzzz_3_146ffe_1 = tzzz_3_146ffe | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_3_146ffe_2 = tzzz_3_146ffe_1 | slice: 0,20 | downcase -%} {%- if tzzz_3_146ffe_2 != 'translation missing:' -%}{%- assign tzzz_3_146ffe = tzzz_3_146ffe_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_4_c74ea6 = "Show less" -%} {%- assign tzzz_4_c74ea6_1 = tzzz_4_c74ea6 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_4_c74ea6_2 = tzzz_4_c74ea6_1 | slice: 0,20 | downcase -%} {%- if tzzz_4_c74ea6_2 != 'translation missing:' -%}{%- assign tzzz_4_c74ea6 = tzzz_4_c74ea6_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_5_2bf5ae = "SKU:" -%} {%- assign tzzz_5_2bf5ae_1 = tzzz_5_2bf5ae | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_5_2bf5ae_2 = tzzz_5_2bf5ae_1 | slice: 0,20 | downcase -%} {%- if tzzz_5_2bf5ae_2 != 'translation missing:' -%}{%- assign tzzz_5_2bf5ae = tzzz_5_2bf5ae_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_6_8c3877 = "Categories:" -%} {%- assign tzzz_6_8c3877_1 = tzzz_6_8c3877 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_6_8c3877_2 = tzzz_6_8c3877_1 | slice: 0,20 | downcase -%} {%- if tzzz_6_8c3877_2 != 'translation missing:' -%}{%- assign tzzz_6_8c3877 = tzzz_6_8c3877_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_7_32b502 = "Tags:" -%} {%- assign tzzz_7_32b502_1 = tzzz_7_32b502 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_7_32b502_2 = tzzz_7_32b502_1 | slice: 0,20 | downcase -%} {%- if tzzz_7_32b502_2 != 'translation missing:' -%}{%- assign tzzz_7_32b502 = tzzz_7_32b502_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_8_084f4c = "UNAVAILABLE" -%} {%- assign tzzz_8_084f4c_1 = tzzz_8_084f4c | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_8_084f4c_2 = tzzz_8_084f4c_1 | slice: 0,20 | downcase -%} {%- if tzzz_8_084f4c_2 != 'translation missing:' -%}{%- assign tzzz_8_084f4c = tzzz_8_084f4c_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_9_10a9e5 = "ADD TO CART" -%} {%- assign tzzz_9_10a9e5_1 = tzzz_9_10a9e5 | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_9_10a9e5_2 = tzzz_9_10a9e5_1 | slice: 0,20 | downcase -%} {%- if tzzz_9_10a9e5_2 != 'translation missing:' -%}{%- assign tzzz_9_10a9e5 = tzzz_9_10a9e5_1 -%}{%- else -%}{%- endif -%} {%- assign tzzz_10_cb68ae = "OUT OF STOCK" -%} {%- assign tzzz_10_cb68ae_1 = tzzz_10_cb68ae | replace: ' ','_'| replace: '!','_'| replace: ':','_' | t -%} {%- assign tzzz_10_cb68ae_2 = tzzz_10_cb68ae_1 | slice: 0,20 | downcase -%} {%- if tzzz_10_cb68ae_2 != 'translation missing:' -%}{%- assign tzzz_10_cb68ae = tzzz_10_cb68ae_1 -%}{%- else -%}{%- endif -%} {% assign descriptionTurnOn = true %} {% assign categoriesTurnOn = true %} {% assign tagsTurnOn = true %} {% assign shareSocialTurnOn = true %} {% assign skuTurnOn = true %} {% assign shopPayTurnOn = true %} {% assign addToCartFooterTurnOn = true %} {% assign isDisplayMedia = true %} {% assign titleTextColor = "#062c59" %} {% assign titleFontSize = "16px" %} {% assign titleFontWeight = 600 %} {% assign optionTitleTextColor = "#000" %} {% assign optionTitleFontSize = "16px" %} {% assign optionTitleFontWeight = 400 %} {% assign addToCartButtonTextColor = "#fff" %} {% assign addToCartButtonBackgroundColor = "#062c59" %} {% assign categoriesTextColor = "#000" %} {% assign priceDefaultTextColor = "#878787" %} {% assign priceDefaultFontSize = "22px" %} {% assign priceDefaultFontWeight = 400 %} {% assign priceSaleTextColor = "#000" %} {% assign priceSaleFontSize = "22px" %} {% assign priceSaleFontWeight = 400 %} {% assign outStockTextColor = "#fc0b03" %} {% assign outStockFontSize = "16px" %} {% assign outStockFontWeight = 400 %} {% assign inStockTextColor = "#4eb0be" %} {% assign inStockFontSize = "16px" %} {% assign inStockFontWeight = 400 %} {% assign showMoreTextColor = "#000" %} {% assign showMoreBackgroundColor = "#fff" %} {% assign handle = "professional-power-clipper-precision-at-your-fingertips" %}{% unless product %}{% assign product = all_products[""] %} {% endunless %}<div style="display: none" class="exrt4685_ctn_v1">{% render "tpt_atl_7fa6932487da3f", tzzz_0_13b9a6 : tzzz_0_13b9a6 , tzzz_1_69d08b : tzzz_1_69d08b , tzzz_2_469b47 : tzzz_2_469b47 , tzzz_3_146ffe : tzzz_3_146ffe , tzzz_4_c74ea6 : tzzz_4_c74ea6 , tzzz_5_2bf5ae : tzzz_5_2bf5ae , tzzz_6_8c3877 : tzzz_6_8c3877 , tzzz_7_32b502 : tzzz_7_32b502 , tzzz_8_084f4c : tzzz_8_084f4c , tzzz_9_10a9e5 : tzzz_9_10a9e5 , tzzz_10_cb68ae : tzzz_10_cb68ae ,descriptionTurnOn:true,categoriesTurnOn:true,tagsTurnOn:true,shareSocialTurnOn:true,skuTurnOn:true,shopPayTurnOn:true,addToCartFooterTurnOn:true,isDisplayMedia:true,titleTextColor:"#062c59",titleFontSize:"16px",titleFontWeight:600,optionTitleTextColor:"#000",optionTitleFontSize:"16px",optionTitleFontWeight:400,addToCartButtonTextColor:"#fff",addToCartButtonBackgroundColor:"#062c59",categoriesTextColor:"#000",priceDefaultTextColor:"#878787",priceDefaultFontSize:"22px",priceDefaultFontWeight:400,priceSaleTextColor:"#000",priceSaleFontSize:"22px",priceSaleFontWeight:400,outStockTextColor:"#fc0b03",outStockFontSize:"16px",outStockFontWeight:400,inStockTextColor:"#4eb0be",inStockFontSize:"16px",inStockFontWeight:400,showMoreTextColor:"#000",showMoreBackgroundColor:"#fff",handle:"", collections : product.collections , product : product ,id: "t_4685" ,ident_1: "kUu1uCnLo3T67Y6Xq2fvk7M7RPc3nEVbYF1WU0Mr4NLe9GhNT8n6hS2oVsoplpZhwGQ0\/bUHl6LYg9Lg8kIK2Q==" ,ident_2: "https:\/\/tapita.io\/pb\/"     %}</div><script>
+                    dynamicAttach(4685,"exrt4685_ctn_v1");
+                    if(!globalThis._tpt_pbds){globalThis._tpt_pbds=[]};
+                    globalThis._tpt_pbds.push(function(){
+                        dynamicAttach(4685,"exrt4685_ctn_v1", true);
+                    });
+                    </script>{% assign product = __very_mysterious_product %}{% assign collection = __very_mysterious_collection %}{% assign collections = __very_mysterious_collections %}{% assign __very_mysterious_product = product %}{% assign __very_mysterious_collection = collection %}{% assign __very_mysterious_collections = collections %}{% assign recommendationLimit = 4 %} {% assign recommendationTitle = "You may also like" %} {% assign recommendationIntent = "related" %} {% assign recommendationTitleTextColor = "#062c59" %} {% assign recommendationPriceDefaultTextColor = "#878787" %} {% assign recommendationPriceSaleTextColor = "#ec0101" %} {% assign handle = "professional-power-clipper-precision-at-your-fingertips" %}{% unless product %}{% assign product = all_products[""] %} {% endunless %}<div style="display: none" class="exrt4609_ctn_v1">{% render "tpt_atl_76e3867217b717",recommendationLimit:4,recommendationTitle:"You may also like",recommendationIntent:"related",recommendationTitleTextColor:"#062c59",recommendationPriceDefaultTextColor:"#878787",recommendationPriceSaleTextColor:"#ec0101",handle:"", collections : product.collections , productId : product.id ,id: "t_4609" ,ident_1: "kUu1uCnLo3T67Y6Xq2fvk7M7RPc3nEVbYF1WU0Mr4NLe9GhNT8n6hS2oVsoplpZhwGQ0\/bUHl6LYg9Lg8kIK2Q==" ,ident_2: "https:\/\/tapita.io\/pb\/"     %}</div><script>
+                    dynamicAttach(4609,"exrt4609_ctn_v1");
+                    if(!globalThis._tpt_pbds){globalThis._tpt_pbds=[]};
+                    globalThis._tpt_pbds.push(function(){
+                        dynamicAttach(4609,"exrt4609_ctn_v1", true);
+                    });
+                    </script>{% assign product = __very_mysterious_product %}{% assign collection = __very_mysterious_collection %}{% assign collections = __very_mysterious_collections %}

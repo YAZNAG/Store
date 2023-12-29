@@ -1,0 +1,250 @@
+<script>window._tpt_anti_helmet = true</script><script>window.__tpt_full_page = 1</script><script class='tpt_dynamic'>
+function dynamicAttach(itemId, containerId, override) {
+    if (!window.__tpt_everlasting_cache) {
+        window.__tpt_everlasting_cache = {};
+    }
+    
+    var slt = '.spb-item.type_actual_statement.spb-item-id_' + itemId;
+    var targetElement = document.querySelector(slt);
+    var containerElement = document.querySelector('.' + containerId);
+    console.log(targetElement, containerElement);
+    if (containerElement && (containerElement.innerHTML).trim().length > 0) {
+            window.__tpt_everlasting_cache[slt] = containerElement.innerHTML;
+    }
+    if ((targetElement && (!targetElement.innerHTML.length || override)) && ((containerElement && (containerElement.innerHTML).trim() || window.__tpt_everlasting_cache[slt]))) {
+        console.log('Found container element');
+    console.log(itemId, containerId);    
+        if (containerElement && (containerElement.innerHTML).trim().length > 0) {
+            var tpt_rerun = containerElement.querySelectorAll('script.tpt_rerun, script.tpt_inject_script');
+            if (containerElement.childNodes) {
+                Array.from(containerElement.childNodes).forEach(function(node) {
+                    targetElement.append(node);
+                });
+            }
+            tpt_rerun.forEach(function(t) {
+                Function(t.innerText)()
+            });
+        } else if (window.__tpt_everlasting_cache[slt]) {
+            targetElement.innerHTML = window.__tpt_everlasting_cache[slt];
+            var tpt_rerun = targetElement.querySelectorAll('script.tpt_rerun, script.tpt_inject_script');
+            tpt_rerun.forEach(function(t) {
+                Function(t.innerText)()
+            });
+        } else if (targetElement && containerElement && targetElement.innerHTML.length) {
+            console.log('Already attached', slt);
+    }
+}
+        if (!window._tapita_ssr_ijt_obj) {
+            window._tapita_ssr_ijt_obj = {};
+        }
+        window._tapita_ssr_ijt_obj[slt] = function() {
+            return dynamicAttach(itemId, containerId, override)
+        };
+    
+}
+</script>
+<script>window._issolate_tapita_hamburger = true;</script>
+
+        <style>
+                .type_actual_statement{width: 100%}
+        </style>
+        {% assign content = page.metafields.tapita["pgt-6b1e4cc"] %}
+        
+        <div id="tapita-page-main-content" style="min-height: 100vh; display: block">
+          <h1 class="tapita-placeholder" style="display:none;">
+            "", 1
+          </h1>
+        </div>
+
+        
+                                <div class='spb-customerhtml-serverrender spb-customerhtml-serverrender-493330' style='display: none;'><input type="hidden" name="form_type" value="contact"><input type="hidden" name="utf8" value="✓"></div>
+                                <script>
+                                var timmerTime = (window && window.screen && window.screen.width && window.screen.width < 1024) ? 1000: 300;
+                                    var timer_493330_counter = 0;
+                                    var timer_493330 = setInterval(function () {
+                                    try{
+                                        timer_493330_counter++;
+                                        let target_c = document.querySelector('.spb-item.spb-item-id_493330');
+                                        let self_c = document.getElementsByClassName('spb-customerhtml-serverrender-493330');
+                                        if (target_c && !target_c.innerHTML) {
+                                            if(self_c.length > 0 ){
+                                                target_c.style.setProperty('display', 'block');
+                                                target_c.style.setProperty('overflow', 'clip');
+                                                self_c[0].style.setProperty('display', 'unset');
+                                                self_c[0].style.setProperty('opacity', '1');
+                                                window.tpb_srsappended_{{ident}}493330 = self_c[0];
+                                                target_c.appendChild(self_c[0]);
+                                            } else if (window.tpb_srsappended_{{ident}}493330) {
+                                                target_c.style.setProperty('display', 'block');
+                                                target_c.style.setProperty('overflow', 'clip');
+                                                window.tpb_srsappended_{{ident}}493330.style.setProperty('display', 'unset');
+                                                target_c.appendChild(window.tpb_srsappended_{{ident}}493330);
+                                            }
+                                        } else if (!target_c) {
+                                            if((self_c.length > 0) && (timer_493330_counter > 1)){
+                                              //  self_c[0].style.setProperty('display', 'unset');
+                                            }
+                                        } else{
+                                            if((timer_493330_counter > 2)){
+                                                for(var i=0;i<self_c.length;i++){
+                                                 var m = self_c.item(i);
+                                                 if(m && m.parentElement&& m.parentElement.classList && m.parentElement.classList.contains("spb-item")){
+                                                    m.style.setProperty('display', 'unset');
+                                                 }else{
+                                                    m.style.setProperty('display', 'none');
+                                                 }
+                                                }
+                                            }
+                                        }
+                                    } catch(e) {
+                                        console.warn(e);
+                                        clearInterval(timer_493330);
+                                    }
+                                }, timmerTime);
+                                </script>
+                            
+        <div class="rte">
+            <script>
+                try {
+                    var _tpt_insigna = "f9da9aad9f47afdcfe5abad6b6dbcda3";
+                    if(!globalThis._tpt_pbds){
+                        globalThis._tpt_pbds = [];
+                    }
+                }catch(e){
+                    console.warn(e);
+                }
+                var tapitacss = `#shopify-section-tapita-main-page, #shopify-section-tapita-main-home { min-height: 100vh; } .main.content { max-width: unset; } .spb-item-root {width: 100%;} h1.main-page-title.page-title {display: none;} .spb-item.type_text {overflow-y: hidden;} `;
+                var tapitahead = document.head || document.getElementsByTagName("head")[0];
+                var tapitastyle = document.createElement("style");
+
+                tapitastyle.type = "text/css";
+                if (tapitastyle.styleSheet){
+                    tapitastyle.styleSheet.cssText = tapitacss;
+                } else {
+                    tapitastyle.appendChild(document.createTextNode(tapitacss));
+                }
+                tapitastyle.class="tapita-custom-css";
+                 
+                var tapitajs = ``;
+                var tapitascript = document.createElement("script");
+                tapitascript.appendChild(document.createTextNode(tapitajs));
+                tapitascript.defer = true;
+                tapitascript.class="tapita-custom-css";
+
+                tapitahead.appendChild(tapitastyle);
+                tapitahead.appendChild(tapitascript);
+                {% if request.page_type == "product" %}
+                    var kulasop  = 9;
+                {% endif %}
+            </script>
+            
+            {{ 'tapita-cdn-assets-1.6.37.js' | asset_url | script_tag }}
+             
+            <script defer>
+                var tapita_counter = 0;
+                var possibleMainTargetQuery = [
+                    
+                    "#tapita-page-main-content",
+                    ".normal_main_content",
+                    "#MainContent",
+                    "shopify-section-tapita-main-page",
+                    "shopify-section-tapita-main-home",
+                    "main",
+                ];
+                {% if request.page_type == "product" %}
+                    var kulasop  = 2;
+                {% endif %}
+              
+                var currentMain = null;
+                for (const selector of possibleMainTargetQuery) {
+                    currentMain = document.querySelector(selector);
+                    if(currentMain){
+                        break;
+                    }
+                }
+                var injector = setInterval(function () {
+                    var idToRender = false;
+                    var mainTarget = null;
+                    for (const selector of possibleMainTargetQuery) {
+                        mainTarget = document.querySelector(selector);
+                        if(mainTarget){
+                            break;
+                        }
+                    }
+                    if(currentMain && currentMain.id !=="MainContent"){
+                        currentMain.id = "MainContentTapita";
+                        idToRender = "MainContentTapita";
+                    }
+                    
+                    if (!idToRender)
+                        return;
+                    {% if request.page_type == "product" %}
+                        var licobioga  = 97;
+                    {% endif %}
+                    tapita_counter += 1;
+                    if (globalThis.PageBuilderComponent) {
+                        var tapitaSections = document.querySelectorAll(".tapitaSection, .spb-customerhtml-serverrender");
+                        currentMain = null;
+                        function tptPBD(forcedRerender){
+                            var lemonadeConsumer = document.querySelector(`#${idToRender} .smpb-container`);
+                            if(lemonadeConsumer && lemonadeConsumer.innerHTML  && !forcedRerender){
+                                return;
+                            }
+                            PageBuilderComponent.renderForIdWithProps(idToRender, {
+                            endPoint: "https://tapita.io/pb/graphql/",
+                            mode: "shopify",
+                            lazyloadPlaceHolder: " ",
+                            formatMessage: globalThis._rms_translate,
+                            _translateParagraph: true,
+                            _translateSEO: true,
+                            _translatePlaceholder: true,
+                            callback: function() { try { if (globalThis.PageBuilderComponent && globalThis._tpt_pbds && (globalThis._tpt_pbds instanceof Array)) globalThis._tpt_pbds.forEach(t => t && t()); } catch (e) { } },
+                            pageData: {"url_path":"\/contact","original_url_path":"\/contact","type_id":0,"priority":10,"entity_id":31885,"name":"contact","status":1,"masked_id":"21740itMNhLkkAYFgrlfvPf1u1702552104","custom_css":" .form-builder-artifact input {width: 100%}","custom_js":"\n if (!tpt_jquery_request) {var tpt_jquery_request = document.createElement(\"script\"); tpt_jquery_request.type = \"text\/javascript\"; tpt_jquery_request.src = \"https:\/\/tapita.io\/pb\/pub\/media\/jquery.min.js\"; document.head.appendChild(tpt_jquery_request);}if (!tpt_link_required) {var tpt_link_required = document.createElement(\"script\"); tpt_link_required.type = \"text\/javascript\"; tpt_link_required.src = \"https:\/\/tapita.io\/pb\/pub\/media\/jqBootstrapValidation.js\"; document.head.appendChild(tpt_link_required);}","keywords":null,"title":"Contact","desc":"","is_rtl":0,"storeview_visibility":"","publish_items":"[{\"entity_id\":493315,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"fontFamily\\\":\\\"inherit\\\",\\\"fontWeight\\\":700,\\\"fontSize\\\":\\\"17px\\\",\\\"lineHeight\\\":\\\"20px\\\"}\",\"data\":\"{\\\"textTag\\\":\\\"h6\\\"}\",\"name\":\"You have a question?\",\"tag_id\":\"pbi_M3YxekoxNjU2MTMxMjk3MTMx_97131\",\"class_name\":\"\",\"type\":\"text\",\"visibility\":\"\",\"sort_order\":20,\"parent_id\":493316,\"storeview_visibility\":0},{\"entity_id\":493316,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"flexShrink\\\":1,\\\"paddingTop\\\":\\\"15px\\\",\\\"paddingBottom\\\":\\\"15px\\\",\\\"paddingLeft\\\":\\\"15px\\\",\\\"paddingRight\\\":\\\"15px\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"textAlign\\\":\\\"center\\\",\\\"marginLeft\\\":0}\",\"data\":\"{\\\"form-submit-url\\\":\\\"\\\\\\\/contact#ContactForm\\\",\\\"form-submit-method\\\":\\\"POST\\\",\\\"form-submit-onSubmit\\\":\\\"window.Shopify.recaptchaV3.addToken(this, \\\\\\\"contact\\\\\\\"); return false;\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_Q21memUxNjU2MTMxMjU0ODAw_54800\",\"class_name\":\"\",\"type\":\"form_group\",\"visibility\":\"\",\"sort_order\":30,\"parent_id\":69788,\"storeview_visibility\":0},{\"entity_id\":493317,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"color\\\":\\\"#333\\\",\\\"border\\\":\\\"1px solid #595959\\\",\\\"paddingTop\\\":10,\\\"paddingBottom\\\":10,\\\"paddingLeft\\\":\\\"20px\\\",\\\"paddingRight\\\":\\\"20px\\\",\\\"textAlign\\\":\\\"left\\\",\\\"cursor\\\":\\\"pointer\\\",\\\"display\\\":\\\"flex\\\",\\\"alignItems\\\":\\\"center\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"widthPercent\\\":100,\\\"fontSize\\\":\\\"13px\\\",\\\"minHeight\\\":\\\"40px\\\"}\",\"data\":\"{\\\"name\\\":\\\"contact[email]\\\",\\\"placeholder\\\":\\\"Email\\\",\\\"isRequired\\\":true}\",\"name\":\"\",\"tag_id\":\"pbi_NDA3UXQxNjM4OTI5NDQxODg1_41885\",\"class_name\":\"\",\"type\":\"text_input\",\"visibility\":\"\",\"sort_order\":40,\"parent_id\":493321,\"storeview_visibility\":0},{\"entity_id\":493318,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"color\\\":\\\"#333\\\",\\\"border\\\":\\\"1px solid #595959\\\",\\\"paddingTop\\\":10,\\\"paddingBottom\\\":10,\\\"paddingLeft\\\":\\\"20px\\\",\\\"paddingRight\\\":\\\"20px\\\",\\\"textAlign\\\":\\\"center\\\",\\\"cursor\\\":\\\"pointer\\\",\\\"display\\\":\\\"flex\\\",\\\"alignItems\\\":\\\"center\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"widthPercent\\\":100,\\\"fontSize\\\":\\\"13px\\\",\\\"minHeight\\\":\\\"40px\\\"}\",\"data\":\"{\\\"name\\\":\\\"contact[Name]\\\",\\\"placeholder\\\":\\\"Name\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_NDA3UXQxNjM4OTI5NDQxODg1_41885\",\"class_name\":\"\",\"type\":\"text_input\",\"visibility\":\"\",\"sort_order\":50,\"parent_id\":493319,\"storeview_visibility\":0},{\"entity_id\":493319,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\",\\\"paddingBottom\\\":5,\\\"paddingLeft\\\":15,\\\"paddingRight\\\":15,\\\"paddingTop\\\":15}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":70,\"parent_id\":493320,\"storeview_visibility\":0},{\"entity_id\":493320,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":0,\\\"paddingBottom\\\":0,\\\"paddingLeft\\\":0,\\\"paddingRight\\\":0,\\\"justifyContent\\\":\\\"center\\\",\\\"display\\\":\\\"grid\\\",\\\"columnGap\\\":\\\"15px\\\",\\\"rowGap\\\":\\\"0px\\\",\\\"gridTemplateColumns\\\":\\\"1fr 1fr\\\",\\\"m_gridTemplateColumns\\\":\\\"1fr\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"t_maxWidth\\\":\\\"1024px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\"}\",\"data\":\"{}\",\"name\":\"\",\"tag_id\":\"pbi_dTF3VFAxNjM5MDQzODMzMjg3_33287\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":80,\"parent_id\":493316,\"storeview_visibility\":0},{\"entity_id\":493321,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\",\\\"paddingBottom\\\":5}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":90,\"parent_id\":493320,\"storeview_visibility\":0},{\"entity_id\":493322,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"backgroundColor\\\":\\\"#111\\\",\\\"color\\\":\\\"#fff\\\",\\\"border\\\":\\\"none\\\",\\\"paddingTop\\\":\\\"10px\\\",\\\"paddingBottom\\\":\\\"10px\\\",\\\"paddingLeft\\\":25,\\\"paddingRight\\\":25,\\\"textAlign\\\":\\\"center\\\",\\\"cursor\\\":\\\"pointer\\\",\\\"display\\\":\\\"flex\\\",\\\"alignItems\\\":\\\"center\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"borderColor\\\":\\\"#ffffff\\\",\\\"borderWidth\\\":\\\"2px\\\",\\\"marginRight\\\":\\\"auto\\\"}\",\"data\":\"{\\\"icon_position\\\":\\\"left\\\",\\\"name\\\":\\\"Subscribe\\\"}\",\"name\":\"SEND\",\"tag_id\":\"pbi_eVo5VjcxNjM4OTMyMTA0NjA4_04608\",\"class_name\":\"\",\"type\":\"form_button\",\"visibility\":\"\",\"sort_order\":170,\"parent_id\":493329,\"storeview_visibility\":0},{\"entity_id\":493323,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"color\\\":\\\"#333\\\",\\\"border\\\":\\\"1px solid #595959\\\",\\\"paddingTop\\\":10,\\\"paddingBottom\\\":10,\\\"paddingLeft\\\":\\\"20px\\\",\\\"paddingRight\\\":\\\"20px\\\",\\\"textAlign\\\":\\\"left\\\",\\\"cursor\\\":\\\"pointer\\\",\\\"display\\\":\\\"flex\\\",\\\"alignItems\\\":\\\"center\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"widthPercent\\\":100,\\\"fontSize\\\":\\\"13px\\\",\\\"minHeight\\\":\\\"40px\\\"}\",\"data\":\"{\\\"name\\\":\\\"contact[Phone number]\\\",\\\"placeholder\\\":\\\"Phone Number\\\",\\\"isRequired\\\":true}\",\"name\":\"\",\"tag_id\":\"pbi_NDA3UXQxNjM4OTI5NDQxODg1_41885\",\"class_name\":\"\",\"type\":\"text_input\",\"visibility\":\"\",\"sort_order\":180,\"parent_id\":493326,\"storeview_visibility\":0},{\"entity_id\":69775,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100}\",\"data\":\"{\\\"paragraphContent\\\":\\\"<p><span style='font-size: 16px;'><strong>Your Dropdown paragraph heading<\\\\\\\/strong><\\\\\\\/span><\\\\\\\/p><p><em>Your Dropdown paragraph content<\\\\\\\/em><\\\\\\\/p>\\\"}\",\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"paragraph\",\"visibility\":\"\",\"sort_order\":190,\"parent_id\":69782,\"storeview_visibility\":0},{\"entity_id\":493324,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"color\\\":\\\"#333\\\",\\\"border\\\":\\\"1px solid #595959\\\",\\\"paddingTop\\\":10,\\\"paddingBottom\\\":10,\\\"paddingLeft\\\":\\\"20px\\\",\\\"paddingRight\\\":\\\"20px\\\",\\\"textAlign\\\":\\\"left\\\",\\\"cursor\\\":\\\"pointer\\\",\\\"display\\\":\\\"flex\\\",\\\"alignItems\\\":\\\"center\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"widthPercent\\\":100,\\\"fontSize\\\":\\\"13px\\\",\\\"minHeight\\\":\\\"40px\\\"}\",\"data\":\"{\\\"name\\\":\\\"contact[Title]\\\",\\\"placeholder\\\":\\\"Title\\\",\\\"isRequired\\\":true}\",\"name\":\"\",\"tag_id\":\"pbi_NDA3UXQxNjM4OTI5NDQxODg1_41885\",\"class_name\":\"\",\"type\":\"text_input\",\"visibility\":\"\",\"sort_order\":200,\"parent_id\":493327,\"storeview_visibility\":0},{\"entity_id\":69776,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100}\",\"data\":\"{\\\"paragraphContent\\\":\\\"<p><span style='font-size: 16px;'><strong>Your Dropdown paragraph heading<\\\\\\\/strong><\\\\\\\/span><\\\\\\\/p><p><em>Your Dropdown paragraph content<\\\\\\\/em><\\\\\\\/p>\\\"}\",\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"paragraph\",\"visibility\":\"\",\"sort_order\":210,\"parent_id\":69783,\"storeview_visibility\":0},{\"entity_id\":493325,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"color\\\":\\\"#333\\\",\\\"border\\\":\\\"1px solid #595959\\\",\\\"paddingTop\\\":10,\\\"paddingBottom\\\":10,\\\"paddingLeft\\\":\\\"20px\\\",\\\"paddingRight\\\":\\\"20px\\\",\\\"textAlign\\\":\\\"left\\\",\\\"cursor\\\":\\\"pointer\\\",\\\"display\\\":\\\"flex\\\",\\\"alignItems\\\":\\\"center\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"widthPercent\\\":100,\\\"fontSize\\\":\\\"13px\\\",\\\"minHeight\\\":\\\"40px\\\"}\",\"data\":\"{\\\"name\\\":\\\"contact[Question]\\\",\\\"placeholder\\\":\\\"Question\\\",\\\"isRequired\\\":true}\",\"name\":\"\",\"tag_id\":\"pbi_NDA3UXQxNjM4OTI5NDQxODg1_41885\",\"class_name\":\"\",\"type\":\"text_input\",\"visibility\":\"\",\"sort_order\":220,\"parent_id\":493328,\"storeview_visibility\":0},{\"entity_id\":69777,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100}\",\"data\":\"{\\\"paragraphContent\\\":\\\"<p><span style='font-size: 16px;'><strong>Your Dropdown paragraph heading<\\\\\\\/strong><\\\\\\\/span><\\\\\\\/p><p><em>Your Dropdown paragraph content<\\\\\\\/em><\\\\\\\/p>\\\"}\",\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"paragraph\",\"visibility\":\"\",\"sort_order\":230,\"parent_id\":69784,\"storeview_visibility\":0},{\"entity_id\":69778,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100}\",\"data\":\"{\\\"paragraphContent\\\":\\\"<p><span style='font-size: 16px;'><strong>Your Dropdown paragraph heading<\\\\\\\/strong><\\\\\\\/span><\\\\\\\/p><p><em>Your Dropdown paragraph content<\\\\\\\/em><\\\\\\\/p>\\\"}\",\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"paragraph\",\"visibility\":\"\",\"sort_order\":240,\"parent_id\":69785,\"storeview_visibility\":0},{\"entity_id\":69779,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100}\",\"data\":\"{\\\"paragraphContent\\\":\\\"<p><span style='font-size: 16px;'><strong>Your Dropdown paragraph heading<\\\\\\\/strong><\\\\\\\/span><\\\\\\\/p><p><em>Your Dropdown paragraph content<\\\\\\\/em><\\\\\\\/p>\\\"}\",\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"paragraph\",\"visibility\":\"\",\"sort_order\":250,\"parent_id\":69786,\"storeview_visibility\":0},{\"entity_id\":69781,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100}\",\"data\":\"{\\\"paragraphContent\\\":\\\"<p><span style=\\\\\\\"font-size: 24px;\\\\\\\"><strong>Point of Contact<\\\\\\\/strong><\\\\\\\/span><br><\\\\\\\/p>\\\\n<p><span style=\\\\\\\"font-size: 14px;\\\\\\\"><strong>SimiCart office<\\\\\\\/strong><\\\\\\\/span><br><span style=\\\\\\\"font-size: 14px;\\\\\\\">6 Nguyen Cong Hoan, Hanoi, Vietnam<\\\\\\\/span><br><br><span style=\\\\\\\"font-size: 14px;\\\\\\\"><strong>Email<\\\\\\\/strong><\\\\\\\/span><br><span style=\\\\\\\"font-size: 14px;\\\\\\\">support@simicart.com<\\\\\\\/span><\\\\\\\/p>\\\\n<p><span style=\\\\\\\"font-size: 14px;\\\\\\\"><strong>Phone<\\\\\\\/strong><\\\\\\\/span><br><span style=\\\\\\\"font-size: 14px;\\\\\\\">+84991495958<\\\\\\\/span><\\\\\\\/p>\\\\n\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_UXpDRk0xNjM5NTM5MTg2OTY0_86964\",\"class_name\":\"\",\"type\":\"paragraph\",\"visibility\":\"\",\"sort_order\":260,\"parent_id\":69787,\"storeview_visibility\":0},{\"entity_id\":493326,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5,\\\"paddingLeft\\\":15,\\\"paddingRight\\\":\\\"15px\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"t_maxWidth\\\":\\\"1024px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"alignItems\\\":\\\"flex-start\\\",\\\"flexWrap\\\":\\\"nowrap\\\"}\",\"data\":\"{}\",\"name\":\"\",\"tag_id\":\"pbi_dUJoUlAxNjM4OTMyMDQyNjY4_42668\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":270,\"parent_id\":493316,\"storeview_visibility\":0},{\"entity_id\":69782,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"backgroundColor\\\":\\\"#ffffff\\\"}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":280,\"parent_id\":69797,\"storeview_visibility\":0},{\"entity_id\":493327,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5,\\\"paddingLeft\\\":15,\\\"paddingRight\\\":\\\"15px\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"t_maxWidth\\\":\\\"1024px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"alignItems\\\":\\\"flex-start\\\",\\\"flexWrap\\\":\\\"nowrap\\\"}\",\"data\":\"{}\",\"name\":\"\",\"tag_id\":\"pbi_N1V5OTUxNjM4OTMyMDQxMTE3_41117\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":290,\"parent_id\":493316,\"storeview_visibility\":0},{\"entity_id\":69783,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"backgroundColor\\\":\\\"#ffffff\\\"}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":300,\"parent_id\":69798,\"storeview_visibility\":0},{\"entity_id\":493328,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":5,\\\"paddingBottom\\\":5,\\\"paddingLeft\\\":15,\\\"paddingRight\\\":\\\"15px\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"t_maxWidth\\\":\\\"1024px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"alignItems\\\":\\\"flex-start\\\",\\\"flexWrap\\\":\\\"nowrap\\\"}\",\"data\":\"{}\",\"name\":\"\",\"tag_id\":\"pbi_N1h6SE0xNjM4OTMyMDM5MTQy_39142\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":310,\"parent_id\":493316,\"storeview_visibility\":0},{\"entity_id\":69784,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"backgroundColor\\\":\\\"#ffffff\\\"}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":320,\"parent_id\":69799,\"storeview_visibility\":0},{\"entity_id\":69785,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"backgroundColor\\\":\\\"#ffffff\\\"}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":330,\"parent_id\":69800,\"storeview_visibility\":0},{\"entity_id\":69786,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"backgroundColor\\\":\\\"#ffffff\\\"}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":340,\"parent_id\":69801,\"storeview_visibility\":0},{\"entity_id\":69787,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\"}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":350,\"parent_id\":69796,\"storeview_visibility\":0},{\"entity_id\":69788,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"padding\\\":\\\"15px\\\",\\\"width\\\":\\\"100%\\\"}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":360,\"parent_id\":69796,\"storeview_visibility\":0},{\"entity_id\":69789,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"column\\\",\\\"widthPercent\\\":100,\\\"heightPixel\\\":500}\",\"data\":\"{\\\"showSliderIndicator\\\":0,\\\"showSliderNavBtn\\\":\\\"1\\\",\\\"sliderAutoSlide\\\":0,\\\"sliderInfiniteLoop\\\":0}\",\"name\":\"\",\"tag_id\":\"pbi_ZmYyajUxNjM5NTM4MjQwNjI4_40628\",\"class_name\":\"\",\"type\":\"slider\",\"visibility\":\"\",\"sort_order\":370,\"parent_id\":0,\"storeview_visibility\":0},{\"entity_id\":69790,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":50,\\\"paddingBottom\\\":0,\\\"backgroundColor\\\":\\\"#ffffff00\\\",\\\"paddingRight\\\":15,\\\"alignItems\\\":\\\"flex-end\\\",\\\"justifyContent\\\":\\\"left\\\",\\\"flexWrap\\\":\\\"nowrap\\\",\\\"flexDirection\\\":\\\"row\\\",\\\"m_widthPercent\\\":100,\\\"m_paddingLeft\\\":0,\\\"m_paddingRight\\\":0,\\\"paddingLeft\\\":30}\",\"data\":null,\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":380,\"parent_id\":69794,\"storeview_visibility\":0},{\"entity_id\":69792,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"textAlign\\\":\\\"left\\\",\\\"fontWeight\\\":700,\\\"fontSize\\\":\\\"24px\\\",\\\"lineHeight\\\":\\\"18px\\\"}\",\"data\":null,\"name\":\"FAQs\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"text\",\"visibility\":\"\",\"sort_order\":390,\"parent_id\":69787,\"storeview_visibility\":0},{\"entity_id\":69794,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"paddingTop\\\":\\\"40px\\\",\\\"paddingBottom\\\":\\\"40px\\\",\\\"display\\\":\\\"flex\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"backgroundImage\\\":\\\"url(https:\\\\\\\/\\\\\\\/tapita.io\\\\\\\/pb\\\\\\\/pub\\\\\\\/media\\\\\\\/spb\\\\\\\/usr\\\\\\\/1\\\\\\\/12\\\\\\\/CTWUcixqp81617782989ad90ae8d911c43d72f4f07b3e8517c02.png)\\\",\\\"flexDirection\\\":\\\"row\\\",\\\"alignItems\\\":\\\"flex-end\\\",\\\"flexWrap\\\":\\\"wrap\\\",\\\"m_paddingLeft\\\":15}\",\"data\":null,\"name\":\"First Slide\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":400,\"parent_id\":69789,\"storeview_visibility\":0},{\"entity_id\":69795,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"textAlign\\\":\\\"left\\\",\\\"backgroundColor\\\":\\\"#ffffff00\\\",\\\"paddingRight\\\":\\\"0px\\\",\\\"color\\\":\\\"#fff\\\",\\\"m_paddingLeft\\\":0,\\\"m_color\\\":\\\"#5b0808\\\",\\\"m_fontSize\\\":\\\"20px\\\"}\",\"data\":\"{\\\"paragraphContent\\\":\\\"<p><span style=\\\\\\\"color: #ffffff;font-size: 30px;\\\\\\\"><strong>Don\\\\u2019t be shy<\\\\\\\/strong><\\\\\\\/span><span style=\\\\\\\"color: #ffffff;\\\\\\\"><br><\\\\\\\/span><span style=\\\\\\\"color: #ffffff;font-size: 30px;\\\\\\\"><strong>Let\\\\u2019s have a talk<\\\\\\\/strong><\\\\\\\/span><\\\\\\\/p>\\\\n\\\"}\",\"name\":\"\",\"tag_id\":\"\",\"class_name\":\"\",\"type\":\"paragraph\",\"visibility\":\"\",\"sort_order\":410,\"parent_id\":69790,\"storeview_visibility\":0},{\"entity_id\":493329,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":\\\"20px\\\",\\\"paddingBottom\\\":\\\"20px\\\",\\\"paddingLeft\\\":\\\"15px\\\",\\\"paddingRight\\\":\\\"15px\\\",\\\"justifyContent\\\":\\\"left\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"t_maxWidth\\\":\\\"1024px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\",\\\"textAlign\\\":\\\"left\\\",\\\"alignItems\\\":\\\"center\\\",\\\"flexWrap\\\":\\\"nowrap\\\"}\",\"data\":\"{}\",\"name\":\"\",\"tag_id\":\"pbi_SHNUZUgxNjM4OTMyMzY2NTQ4_66548\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":420,\"parent_id\":493316,\"storeview_visibility\":0},{\"entity_id\":69796,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":\\\"20px\\\",\\\"paddingBottom\\\":\\\"20px\\\",\\\"paddingLeft\\\":\\\"15px\\\",\\\"paddingRight\\\":\\\"15px\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"display\\\":\\\"grid\\\",\\\"columnGap\\\":\\\"15px\\\",\\\"rowGap\\\":\\\"15px\\\",\\\"gridTemplateColumns\\\":\\\"1fr 1fr\\\",\\\"m_gridTemplateColumns\\\":\\\"1fr\\\",\\\"maxWidth\\\":\\\"1280px\\\",\\\"t_maxWidth\\\":\\\"1024px\\\",\\\"marginLeft\\\":\\\"auto\\\",\\\"marginRight\\\":\\\"auto\\\"}\",\"data\":\"{}\",\"name\":\"\",\"tag_id\":\"pbi_TVZvMWcxNjM5NTM5MTI5NTQ1_29545\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":430,\"parent_id\":0,\"storeview_visibility\":0},{\"entity_id\":69797,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"backgroundColor\\\":\\\"#f6f6f6\\\"}\",\"data\":\"{\\\"dropdownDefaultExpanded\\\":0}\",\"name\":\"How can I find the way?\",\"tag_id\":\"pbi_VkpPeEExNjM5NTQwNDA1NzMx_05731\",\"class_name\":\"\",\"type\":\"dropdown\",\"visibility\":\"\",\"sort_order\":440,\"parent_id\":69787,\"storeview_visibility\":0},{\"entity_id\":69798,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"backgroundColor\\\":\\\"#f6f6f6\\\"}\",\"data\":\"{\\\"dropdownDefaultExpanded\\\":0}\",\"name\":\"How can I find the way?\",\"tag_id\":\"pbi_RnF1a0oxNjM5NTQwNDg1NzE5_85719\",\"class_name\":\"\",\"type\":\"dropdown\",\"visibility\":\"\",\"sort_order\":450,\"parent_id\":69787,\"storeview_visibility\":0},{\"entity_id\":69799,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"backgroundColor\\\":\\\"#f6f6f6\\\"}\",\"data\":\"{\\\"dropdownDefaultExpanded\\\":0}\",\"name\":\"How can I find the way?\",\"tag_id\":\"pbi_b2NjSGwxNjM5NTQwNTE4NDM2_18436\",\"class_name\":\"\",\"type\":\"dropdown\",\"visibility\":\"\",\"sort_order\":460,\"parent_id\":69787,\"storeview_visibility\":0},{\"entity_id\":69800,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"backgroundColor\\\":\\\"#f6f6f6\\\"}\",\"data\":\"{\\\"dropdownDefaultExpanded\\\":0}\",\"name\":\"How can I find the way?\",\"tag_id\":\"pbi_NEF4TEExNjM5NTQwNTE3MTM5_17139\",\"class_name\":\"\",\"type\":\"dropdown\",\"visibility\":\"\",\"sort_order\":470,\"parent_id\":69787,\"storeview_visibility\":0},{\"entity_id\":493330,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100}\",\"data\":\"{\\\"htmlContent\\\":\\\"\\\"}\",\"name\":\"\",\"tag_id\":\"pbi_YjNqNkQxNjQ5MDU3Nzc1MTYw_75160\",\"class_name\":\"\",\"type\":\"custom_html\",\"visibility\":\"\",\"sort_order\":480,\"parent_id\":493316,\"storeview_visibility\":0},{\"entity_id\":69801,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"widthPercent\\\":100,\\\"backgroundColor\\\":\\\"#f6f6f6\\\"}\",\"data\":\"{\\\"dropdownDefaultExpanded\\\":0}\",\"name\":\"How can I find the way?\",\"tag_id\":\"pbi_TGdhSXMxNjM5NTQwNTE1MTc5_15179\",\"class_name\":\"\",\"type\":\"dropdown\",\"visibility\":\"\",\"sort_order\":490,\"parent_id\":69787,\"storeview_visibility\":0},{\"entity_id\":69811,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":\\\"20px\\\",\\\"paddingBottom\\\":\\\"20px\\\",\\\"paddingLeft\\\":\\\"15px\\\",\\\"paddingRight\\\":\\\"15px\\\",\\\"justifyContent\\\":\\\"center\\\",\\\"backgroundColor\\\":\\\"#f8f8f8\\\"}\",\"data\":\"{}\",\"name\":\"\",\"tag_id\":\"pbi_bGhqTzAxNjM5NTQxNzM3ODE4_37818\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":500,\"parent_id\":0,\"storeview_visibility\":0},{\"entity_id\":69817,\"page_id\":\"31885\",\"status\":1,\"styles\":\"{\\\"flexDirection\\\":\\\"row\\\",\\\"widthPercent\\\":100,\\\"flexShrink\\\":1,\\\"paddingTop\\\":\\\"20px\\\",\\\"paddingBottom\\\":\\\"20px\\\",\\\"paddingLeft\\\":\\\"15px\\\",\\\"paddingRight\\\":\\\"15px\\\",\\\"justifyContent\\\":\\\"center\\\"}\",\"data\":\"{}\",\"name\":\"\",\"tag_id\":\"pbi_WGtGNkwxNjM5NTQyMDY5OTQz_69943\",\"class_name\":\"\",\"type\":\"container\",\"visibility\":\"\",\"sort_order\":560,\"parent_id\":0,\"storeview_visibility\":0}]","updated_at":"2023-12-17 13:13:45","image":"https:\/\/tapita.io\/pb\/pub\/media\/spb\/usr\/1\/962\/1667469881PBPAGEIMAGE.png"}
+                            });
+                        }
+                        globalThis._tpt_pbds.push(tptPBD);
+                        tptPBD();
+                        
+        function _tapita_ssr_cti(){window._tapita_ssr_ijt_obj && Object.values(window._tapita_ssr_ijt_obj||{}).forEach(function (t){t&&t()})};
+        _tapita_ssr_cti();
+        if(!globalThis._tpt_pbds){globalThis._tpt_pbds=[]};
+        globalThis._tpt_pbds.push(_tapita_ssr_cti);
+        window.addEventListener("resize", ()=>{_tapita_ssr_cti()});
+        ;
+                        var documentFragment = document.createDocumentFragment();
+                        tapitaSections.forEach(function(el){documentFragment.appendChild(el)});
+                        document.querySelector("#" + idToRender).appendChild(documentFragment);
+                        tapitaSections = null;
+                        clearInterval(injector);
+                    } else if (tapita_counter > 60) {
+                        clearInterval(injector);
+                    }
+                }, 100);
+            </script>
+        </div>
+
+        <div class="tel">
+        {% for field in content.value %}
+          {% if field.type == "product_grid" %}
+          {% render 'tapita-product-grid',
+                    product_target_ident: field.settings.product_target_ident,
+                    product_handle: field.settings.product-handle,
+                    product_handles: field.settings.product-handles,
+                    product_ident: field.settings.product_ident,
+                    product_title: field.settings.product-title,
+                    product_limit: field.settings.product-limit,
+                    evenlyHeight: field.settings.evenlyHeight
+          %}
+          {% elsif field.type == "product_scroll" %}
+          {% render 'tapita-product-list',
+                    product_target_ident: field.settings.product_target_ident,
+                    product_handle: field.settings.product-handle,
+                    product_handles: field.settings.product-handles,
+                    product_ident: field.settings.product_ident,
+                    product_title: field.settings.product-title,
+                    product_limit: field.settings.product-limit,
+          %}
+          {% endif %}
+          {% endfor %}
+        </div>
+        
